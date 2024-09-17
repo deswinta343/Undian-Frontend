@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-color: #fff;
+        }
+
+        .header{
+            padding: 40px;
+            color: #fff;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+        .header h1, p{
+            text-align: center;
+        }
+
+        .wheel{
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .center-circle{
+            width: 100px;
+            height: 100px;
+            border-radius: 60px;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .triangle{
+            width: 0; 
+            height: 0; 
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent; 
+            border-right: 30px solid white; 
+            position: absolute;
+            top: 50%;
+            right: -220%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>WINNER</h1>
+        <p id="winner">NONE</p>
+    </div>
+    <div class="wheel">
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <div class="center-circle" onclick="spin()">
+            <div class="triangle"></div>
+        </div>
+    </div>
+
+    <script>
+        function randomColor(){
+            const r = Math.floor(Math.random() * 255);
+            const g = Math.floor(Math.random() * 255);
+            const b = Math.floor(Math.random() * 255);
+            return { r, g, b };
+        }
+
+        function toRad(deg){
+            return deg * (Math.PI / 180.0);
+        }
+
+        function randomRange(min, max){
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function easeOutSine(x) {
+            return Math.sin((x * Math.PI) / 2);
+        }
+
+        function getPercent(input, min, max){
+            return (((input - min) * 100) / (max - min)) / 100;
+        }
+
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        const width = document.getElementById("canvas").width;
+        const height = document.getElementById("canvas").height;
+
+        const centerX = width / 2;
+        const centerY = height / 2;
+        const radius = width / 2;
+
+        let items = [];
+        let currentDeg = 0;
+        let step;
+        let colors = [];
+        let itemDegs = {};
+        async function fetchData() {
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/kandidat-hadiah-umum/get');
+                const result = await response.json();
+                items = result.data.filter(kandidat => kandidat.status === 'belum menang').map(kandidat => kandidat.nama);
+                createWheel();
+            } catch (error) {
+                console.error('Error getting kandidat:', error);
+            }
+        }
+
+        function createWheel() {
+            step = 360 / items.length;
+            colors = [];
+            for (let i = 0; i < items.length; i++) {
+                colors.push(randomColor());
+            }
+            draw();
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, width, height);
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, toRad(0), toRad(360));
+            ctx.fillStyle = `rgb(${33},${33},${33})`;
+            ctx.lineTo(centerX, centerY);
+            ctx.fill();
+
+            let startDeg = currentDeg;
+            for (let i = 0; i < items.length; i++, startDeg += step) {
+                let endDeg = startDeg + step;
+                const color = colors[i];
+                const colorStyle = `rgb(${color.r},${color.g},${color.b})`;
+
+                // Draw segment background
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius - 2, toRad(startDeg), toRad(endDeg));
+                ctx.fillStyle = `rgb(${color.r - 30},${color.g - 30},${color.b - 30})`;
+                ctx.lineTo(centerX, centerY);
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius - 30, toRad(startDeg), toRad(endDeg));
+                ctx.fillStyle = colorStyle;
+                ctx.lineTo(centerX, centerY);
+                ctx.fill();
+
+                // Draw text
+                ctx.save();
+                ctx.translate(centerX, centerY);
+                ctx.rotate(toRad((startDeg + endDeg) / 2));
+                ctx.textAlign = "center";
+                ctx.fillStyle = (color.r > 150 || color.g > 150 || color.b > 150) ? "#000" : "#fff";
+                ctx.font = 'bold 24px serif';
+                ctx.fillText(items[i], 130, 10);
+                ctx.restore();
+
+                // Store item degree ranges
+                itemDegs[items[i]] = { startDeg, endDeg };
+            }
+        }
+
+        let speed = 0;
+        let maxRotation = randomRange(360 * 3, 360 * 6);
+        let pause = false;
+
+        function animate() {
+            if (pause) return;
+
+            speed = easeOutSine(getPercent(currentDeg, maxRotation, 0)) * 20;
+            if (speed < 0.01) {
+                speed = 0;
+                pause = true;
+
+                // Determine the winner based on final degree
+                let finalDeg = currentDeg % 360;
+                for (let item in itemDegs) {
+                    const { startDeg, endDeg } = itemDegs[item];
+                    if ((finalDeg >= startDeg && finalDeg < endDeg) || (startDeg > endDeg && (finalDeg >= startDeg || finalDeg < endDeg))) {
+                        document.getElementById("winner").innerHTML = item;
+                        break;
+                    }
+                }
+                return;
+            }
+
+            currentDeg += speed;
+            draw();
+            window.requestAnimationFrame(animate);
+        }
+
+        function spin() {
+            if (speed !== 0) return;
+
+            currentDeg = 0;
+            pause = false;
+            draw();
+            maxRotation = randomRange(360 * 3, 360 * 6);
+            window.requestAnimationFrame(animate);
+        }
+
+        // Panggil fetchData ketika halaman selesai dimuat
+        window.onload = fetchData;
+    </script>
+</body>
+</html>

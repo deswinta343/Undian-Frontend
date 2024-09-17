@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Undian DAOP 7</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/rb-logo.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+            <a href="dahsboard.html" class="logo d-flex align-items-center">
+              <img src="assets/img/rb-logo.png" alt="">
+              <span class="d-none d-lg-block">UNDIAN DAOP 7</span>
+            </a>
+          </div><!-- End Logo -->
+      
+
+        <!-- <div class="search-bar">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            </form>
+        </div> -->
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+                <li class="nav-item dropdown pe-3">
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="assets/img/user-profile.png" alt="Profile" class="rounded-circle">
+                        <span id="displayUsername" class="d-none d-md-block dropdown-toggle ps-2"></span>
+                    </a><!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#" id="signOut">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Log out</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- End Profile Dropdown Items -->
+                </li>
+                <!-- End Profile Nav -->
+
+            </ul>
+        </nav><!-- End Icons Navigation -->
+
+    </header><!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+    
+            <li class="nav-item">
+                <a class="nav-link" href="dahsboard.html">
+                    <i class="bi bi-house-door"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link " href="history.html">
+                    <i class="bi bi-grid"></i>
+                    <span>History</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+            
+            <li class="nav-item">
+                <a class="nav-link" href="master-user.html">
+                    <i class="bi bi-person-circle"></i>
+                    <span>Master User</span>
+                </a>
+            </li><!-- End Master User Nav -->
+            
+            <li class="nav-item">
+                <a class="nav-link" href="master-kandidat-HG.html">
+                    <i class="bi bi-person-badge"></i>
+                    <span>Master Kandidat</span>
+                </a>
+            </li><!-- End Master Kandidat Nav -->
+            
+            <li class="nav-item">
+                <a class="nav-link" href="master-event.html">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>Master Event</span>
+                </a>
+            </li><!-- End Master Event Nav -->
+            <li class="nav-item">
+                <a class="nav-link" href="master-doorprize.html">
+                    <i class="bi bi-gift"></i>
+                    <span>Master Doorprize</span>
+                </a>
+            </li><!-- End Master Doorprize Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-error-404.html">
+                  <i class="bi bi-dash-circle"></i>
+                  <span>Error 404</span>
+                </a>
+              </li><!-- End Error 404 Page Nav -->
+        
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-blank.html">
+                  <i class="bi bi-file-earmark"></i>
+                  <span>Blank</span>
+                </a>
+              </li><!-- End Blank Page Nav -->
+        
+            </ul>
+
+
+    </aside><!-- End Sidebar-->
+
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+            <h1>Tabel Data Master</h1>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <nav>
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="dahsboard.html">Kembali</a></li>
+                        <!-- <li class="breadcrumb-item">Tabel</li> -->
+                        <li class="breadcrumb-item active">Tabel Hadiah</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- <div class="container mx-auto"> -->
+
+        <div class="flex justify-between items-center mb-4">
+            <!-- Tombol Add User dengan ikon -->
+            <a href="#" class="btn btn-primary d-flex items-center" data-bs-toggle="modal"
+                data-bs-target="#verticalycentered">
+                <i class="bi bi-person-plus-fill me-2"></i> <!-- Ikon Add User -->
+                <span>Tambah Hadiah</span>
+            </a>
+
+            <!-- Search Bar -->
+            <input type="text" id="searchQuery" placeholder="Search..."
+                class="w-full max-w-xs px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <!-- Tabel Data Admin -->
+        <div class="overflow-x-auto rounded-lg border border-gray-200">
+            <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+                <thead class="ltr:text-left rtl:text-right">
+                    <tr>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">No</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Nama</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Kategori</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Jumlah Awal</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Jumlah Sisa</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">sponsor</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Action</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Created adt</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Updated at</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200" id="dataHadiahTable">
+                </tbody>
+            </table>
+
+            <!-- Pagination Controls -->
+            <div id="paginationControls" class="flex justify-center mt-4"></div>
+        </div>
+        <!-- </div> -->
+
+        <!-- </div> -->
+
+    </main><!-- End #main -->
+
+    <!-- modal add -->
+    <!-- Modal -->
+    <div class="modal fade" id="verticalycentered" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm-custom">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Multi Columns Form -->
+                    <form id="addHadiahForm" class="row g-3">
+                        <div class="col-md-12">
+                            <label for="inputNama" class="form-label">Nama Hadiah</label>
+                            <input type="text" class="form-control" id="inputNama" name="nama_hadiah" placeholder="masukkan nama" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputJenis" class="form-label">Jenis</label>
+                            <select id="inputJenis" name="kategori" class="form-select" required>
+                                <option selected disabled>Pilih...</option>
+                                <option value="Umum">Umum</option>
+                                <option value="Utama">Utama</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputJumlah" class="form-label">Jumlah</label>
+                            <input type="number" class="form-control" id="inputJumlah" name="jumlah_awal" placeholder="masukkan jumlah" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="input" class="form-label">Sponsor</label>
+                            <input type="text" class="form-control" id="inputSponsor" name="sponsor" placeholder="masukkan sponsor opsional">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form><!-- End Multi Columns Form -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end modal add -->
+
+   <!-- Modal Edit Admin -->
+<div id="editHadiahModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div class="bg-white w-full max-w-lg mx-auto rounded shadow-lg p-6 relative">
+        <h2 class="text-2xl font-bold mb-4">Edit Hadiah</h2>
+        <form id="editForm" class="space-y-4">
+            <input type="hidden" id="editHadiahId">
+            <div>
+                <label class="block text-sm font-medium mb-2">Nama Hadiah</label>
+                <input type="text" id="editNama" class="w-full border rounded px-3 py-2">
+            </div>
+            <div class="col-md-6">
+                <label for="inputJenis" class="form-label">Jenis</label>
+                <select id="editJenis" name="jenis" class="form-select" required>
+                    <option selected disabled>Pilih...</option>
+                    <option value="Umum">Umum</option>
+                    <option value="Utama">Utama</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-2">Jumlah</label>
+                <input type="number" id="editJumlah" class="w-full border rounded px-3 py-2">
+            </div>
+            <div class="col-md-12">
+                <label for="input" class="form-label">Sponsor</label>
+                <input type="text" class="form-control" id="editSponsor" name="sponsor" placeholder="masukkan sponsor opsional">
+            </div>
+            <div class="flex justify-between">
+                <button type="button" id="closeEditModalBtn" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+                    Batal
+                </button>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    Simpan perubahan
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+ <!-- delete Modal -->
+ <div class="modal fade" id="allert-delete" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Hapus data?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Data akan dihapus secara permanen.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">tidak</button>
+                <button type="button" class="btn btn-primary" onclick="confirmDelete()">ya</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            &copy; Developer by <strong><span>KAI DAOP 7</span></strong>. All Rights Reserved
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Ambil username dari localStorage
+        const username = localStorage.getItem('username');
+
+        // Cek jika username ada di localStorage
+        if (username) {
+            // Tampilkan username di elemen dengan id 'displayUsername'
+            document.getElementById('displayUsername').textContent = username;
+        } else {
+            // Jika tidak ada username, redirect ke halaman login atau tampilkan pesan
+            console.log("No username found. Please login.");
+            window.location.href = "pages-login.html"; // Redirect ke halaman login jika diperlukan
+        }
+    </script>
+    <script>
+document.getElementById('searchQuery').addEventListener('input', function () {
+    const searchQuery = this.value;
+
+    // Kirim query pencarian ke backend saat input berubah
+    fetchData(searchQuery);
+});
+function fetchData(searchQuery) {
+    fetch('http://127.0.0.1:8000/api/doorprize/filter-hadiah', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+        },
+        body: JSON.stringify({
+            search: searchQuery
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            return response.text().then(text => { throw new Error(text); });
+        }
+    })
+    .then(data => {
+        console.log('Filtered Data:', data);
+        // Proses data untuk ditampilkan di tabel
+        updateTable(data);
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+function updateTable(data) {
+    const tableBody = document.getElementById('dataHadiahTable');
+    if (tableBody) {
+        tableBody.innerHTML = ''; // Kosongkan tabel terlebih dahulu
+
+        if (data.success && Array.isArray(data.data) && data.data.length > 0) {
+            data.data.forEach((item, index) => {
+                const row = `
+                    <tr>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${index + 1}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.nama_hadiah}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.kategori}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.jumlah_awal}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.jumlah_sisa}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.sponsor}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">
+                          <button class="edit-button bg-blue-500 text-white px-2 py-1 rounded" onclick="editHadiah(${item.id})">Edit</button>
+                          <button class="delete-button bg-red-500 text-white px-2 py-1 rounded" onclick="showDeleteModal(${item.id})">Delete</button>
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">
+                          ${new Date(item.created_at).toLocaleDateString('en-GB')} ${new Date(item.created_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">
+                          ${new Date(item.updated_at).toLocaleDateString('en-GB')} ${new Date(item.updated_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+                        </td>
+                    </tr>
+                `;
+                tableBody.insertAdjacentHTML('beforeend', row);
+            });
+        } else {
+            tableBody.innerHTML = '<tr><td colspan="8" class="text-center">No data found</td></tr>';
+        }
+    }
+}
+
+    </script>
+
+    <script>
+        document.getElementById("signOut").addEventListener("click", function (doorprize) {
+            event.preventDefault(); // Mencegah reload halaman
+
+            // Hapus JWT token dari localStorage
+            localStorage.removeItem("jwtToken");
+            localStorage.removeItem("username");
+
+            // Arahkan user ke halaman login
+            window.location.href = "pages-login.html"; // Ganti dengan path halaman login Anda
+        });
+    </script>
+
+<script>
+    let doorprizeIdToDelete = null;
+
+    function showDeleteModal(id) {
+        doorprizeIdToDelete = id;
+        // Gunakan Bootstrap untuk membuka modal
+        var myModal = new bootstrap.Modal(document.getElementById('allert-delete'));
+        myModal.show();
+    }
+
+    function confirmDelete() {
+        if (doorprizeIdToDelete !== null) {
+            // Panggil fungsi untuk menghapus data admin
+            deleteDoorprize(doorprizeIdToDelete);
+        }
+    }
+    function deleteDoorprize(id) {
+        fetch(`http://127.0.0.1:8000/api/doorprize/delete/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+                }
+            })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                alert('Doorprize deleted successfully');
+                // Lakukan refresh atau update UI sesuai kebutuhan
+                location.reload(); // Contoh: Refresh halaman setelah berhasil hapus
+            } else {
+                alert('Error: ' + data.error);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>
+
+    <script>
+        // Deklarasi fungsi loadDataTabel di global scope
+        function loadDataTabel() {
+            console.log(localStorage.getItem('jwtToken'))
+            fetch('http://127.0.0.1:8000/api/doorprize/get-hadiah', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+                }
+            })
+                .then(response => response.json())  // Ubah response menjadi objek JSON
+                .then(data => {
+                    console.log('Data fetched:', data.data); // Cek data yang diterima
+
+                    const tableBody = document.getElementById('dataHadiahTable');
+                    if (!tableBody) {
+                        console.error('Element with id "dataHadiahTable" not found.');
+                        return;
+                    }
+
+                    tableBody.innerHTML = ''; // Kosongkan tabel terlebih dahulu
+
+                    // Periksa apakah data.admins berupa array
+                    if (Array.isArray(data.data)) {
+                        data.data.forEach((item, index) => {
+                            const row = `
+                 <tr>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${index + 1}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${item.nama_hadiah}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${item.kategori}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${item.jumlah_awal}</td>
+        <td class="whitespace-nowrap px-5 py-1 text-center">${item.jumlah_sisa}</td>
+        <td class="whitespace-nowrap px-5 py-1 text-center">${item.sponsor}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">
+      <button class="edit-button bg-blue-500 text-white px-2 py-1 rounded" onclick="editHadiah(${item.id})">Edit</button>
+      <button class="delete-button bg-red-500 text-white px-2 py-1 rounded" onclick="showDeleteModal(${item.id})">Delete</button>
+    </td>
+    </td>
+          <td class="whitespace-nowrap px-5 py-1 text-center">
+  ${new Date(item.created_at).toLocaleDateString('en-GB')} ${new Date(item.created_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+</td>
+<td class="whitespace-nowrap px-5 py-1 text-center">
+  ${new Date(item.updated_at).toLocaleDateString('en-GB')} ${new Date(item.updated_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+</td>
+
+</tr>
+                    `;
+                            tableBody.insertAdjacentHTML('beforeend', row); // Tambahkan row ke tabel
+                        });
+                    } else {
+                        console.error('Data format is incorrect. Expected "doorprize" to be an array.');
+                    }
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        document.getElementById('addHadiahForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Mencegah form dari submit secara default
+
+    // Ambil data dari form
+    const formData = new FormData(this);
+
+    // Konversi FormData menjadi objek JSON
+    const data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    // Kirim data ke endpoint
+    fetch('http://127.0.0.1:8000/api/doorprize/add-hadiah', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+    },
+    body: JSON.stringify(data),
+})
+    .then(response => {
+        console.log('Response Status:', response.status);
+        console.log('Response Headers:', [...response.headers]); // Log semua header response
+        if (response.status === 302) {
+            return response.text().then(text => {
+                throw new Error(`Redirect detected. Location: ${response.headers.get('Location')}, Response Text: ${text}`);
+            });
+        }
+        if (!response.ok) {
+            return response.text().then(text => {
+                throw new Error(`Error ${response.status}: ${text}`);
+            });
+        }
+        return response.json();
+    })
+    .then(result => {
+        console.log('Success:', result);
+        alert('Doorprize successfully added!');
+        const modal = bootstrap.Modal.getInstance(document.getElementById('verticalycentered'));
+        if (modal) modal.hide();
+        document.getElementById('addHadiahForm').reset();
+        loadDataTabel();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred!');
+    });
+
+
+});
+
+// Panggil fungsi untuk memuat data tabel ketika halaman dimuat
+document.addEventListener('DOMContentLoaded', loadDataTabel);
+
+
+   // Elements
+const editHadiahModal = document.getElementById('editHadiahModal');
+const closeEditModalBtn = document.getElementById('closeEditModalBtn');
+const editForm = document.getElementById('editForm');
+
+// Show Modal (Corrected Function Name)
+function editHadiah(id) {
+    fetch(`http://127.0.0.1:8000/api/doorprize/get-hadiah/${id}`)
+        .then(response => response.json())
+        .then(doorprize => {
+            console.log(doorprize);
+            // Populate modal with existing hadiah data
+            document.getElementById('editHadiahId').value = doorprize.data.id;
+                document.getElementById('editNama').value = doorprize.data.nama_hadiah;
+                document.getElementById('editJenis').value = doorprize.data.kategori;
+                document.getElementById('editJumlah').value = doorprize.data.jumlah_awal;
+                document.getElementById('editSponsor').value = doorprize.data.sponsor;
+            
+            // Show the modal
+            editHadiahModal.classList.remove('hidden');
+        })
+        .catch(error => {
+            console.error('Error fetching doorprize data:', error);
+        });
+}
+
+// Hide Modal
+closeEditModalBtn.addEventListener('click', () => {
+    editHadiahModal.classList.add('hidden');
+});
+
+// Handle form submission for editing doorprize
+editForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const id = document.getElementById('editHadiahId').value;
+    const nama_hadiah = document.getElementById('editNama').value;
+    const kategori = document.getElementById('editJenis').value;
+    const jumlah_awal = document.getElementById('editJumlah').value;
+    const sponsor = document.getElementById('editSponsor').value;
+
+    try {
+        const response = await fetch(`http://127.0.0.1:8000/api/doorprize/update/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                nama_hadiah,
+                kategori,
+                jumlah_awal,
+                sponsor,
+            }),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            alert('Doorprize updated successfully');
+            editHadiahModal.classList.add('hidden');
+            loadDataTabel(); // Reload the table data
+        } else {
+            alert('Error: ' + result.error);
+        }
+    } catch (error) {
+        console.error('Error updating doorprize:', error);
+        alert('An error occurred while updating the doorprize.');
+    }
+});
+
+    </script>
+</body>
+
+</html>

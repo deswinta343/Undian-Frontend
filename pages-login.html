@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Undian DAOP 7</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/rb-logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Updated: Apr 20 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!--
+  Heads up! 👋
+
+  Plugins:
+    - @tailwindcss/forms
+-->
+<main>
+  <div class="mx-auto max-w-screen-xl px-4 py-24 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-lg text-center">
+      <img src="assets/img/rb-logo.png" alt="Logo" class="mx-auto mb-4 w-32 h-auto">
+      <h1 class="text-2xl font-bold sm:text-3xl">Selamat datang di Undian DAOP 7!</h1>
+      
+    </div>
+    <form action="#" class="mx-auto mb-0 mt-8 max-w-md space-y-4 needs-validation">
+      <div>
+        <label for="yourUsername" class="sr-only">Username</label>
+        <div class="relative">
+          <input
+            type="text"
+            id="yourUsername"
+            name="nama"
+            class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+            placeholder="Enter username"
+            required
+          />
+        </div>
+        <div class="invalid-feedback">Masukkan username.</div>
+      </div>
+
+      <div>
+        <label for="yourPassword" class="sr-only">Password</label>
+        <div class="relative">
+          <input
+            type="password"
+            id="yourPassword"
+            name="password"
+            class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+            placeholder="Enter password"
+            required
+          />
+        </div>
+        <div class="invalid-feedback">Masukkan password!</div>
+      </div>
+
+      <div class="flex justify-center">
+        <button
+          type="submit"
+          class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
+        >
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</main>
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.querySelector("form.needs-validation").addEventListener("submit", function (event) {
+      event.preventDefault(); // Mencegah reload halaman
+    
+      // Ambil nilai input
+      const nama = document.getElementById("yourUsername").value;
+      const password = document.getElementById("yourPassword").value;
+    
+      // Validasi input
+      if (nama === "" || password === "") {
+        if (nama === "") {
+          document.getElementById("yourUsername").classList.add("is-invalid");
+        }
+        if (password === "") {
+          document.getElementById("yourPassword").classList.add("is-invalid");
+        }
+        return;
+      } else {
+        // Hapus error jika input valid
+        document.getElementById("yourUsername").classList.remove("is-invalid");
+        document.getElementById("yourPassword").classList.remove("is-invalid");
+      }
+    
+      // Data untuk dikirim ke endpoint
+      const loginData = {
+        nama: nama,
+        password: password
+      };
+    
+      // Kirim request ke endpoint login
+      fetch('http://127.0.0.1:8000/api/auth/login', { // Ganti dengan URL endpoint login Anda
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(loginData)
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.token && data.user) {
+            // Simpan token dan informasi user ke localStorage
+            localStorage.setItem('jwtToken', data.token);
+            localStorage.setItem('username', nama);
+            localStorage.setItem('role', data.user.role);  // Mendapatkan role dari respons
+    
+            // Redirect ke halaman setelah login
+            window.location.href = "dahsboard.html"; // Ganti dengan path halaman setelah login
+          } else {
+            alert("Login gagal: " + (data.message || "Invalid credentials"));
+          }
+        })
+        .catch(error => {
+          console.error("Error during login:", error);
+          alert("Terjadi kesalahan. Silakan coba lagi.");
+        });
+    });
+  </script>
+
+
+
+</body>
+
+</html>

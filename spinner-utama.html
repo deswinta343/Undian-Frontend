@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Undian DAOP 7</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/rb-logo.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/spinwell.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+            <a href="index.html" class="logo d-flex align-items-center">
+                <img src="assets/img/rb-logo.png" alt="">
+                <span class="d-none d-lg-block">UNDIAN DAOP 7</span>
+            </a>
+        </div><!-- End Logo -->
+
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+
+
+                <li class="nav-item dropdown">
+
+                </li><!-- End Notification Nav -->
+
+                <li class="nav-item dropdown">
+
+
+
+                </li><!-- End Messages Nav -->
+
+                <li class="nav-item dropdown pe-3">
+
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="assets/img/user-profile.png" alt="Profile" class="rounded-circle">
+                        <span id="displayUsername" class="d-none d-md-block dropdown-toggle ps-2"></span>
+                    </a><!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#" id="signOut">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Log out</span>
+                            </a>
+                        </li>
+
+                    </ul><!-- End Profile Dropdown Items -->
+                </li><!-- End Profile Nav -->
+
+            </ul>
+        </nav><!-- End Icons Navigation -->
+
+    </header><!-- End Header -->
+    </header><!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link " href="dahsboard.html">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link " href="history.html">
+                    <i class="bi bi-grid"></i>
+                    <span>History</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-layout-text-window-reverse"></i><span>Mastering Data</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li id="mastering-menu">
+                        <a href="master-user.html">
+                            <i class="bi bi-circle"></i><span>Master User</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="master-kandidat-HG.html">
+                            <i class="bi bi-circle"></i><span>Master Data Kandidat</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="master-event.html">
+                            <i class="bi bi-circle"></i><span>Master Event</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="master-doorprize.html">
+                            <i class="bi bi-circle"></i><span>Master Doorprize</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Tables Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-error-404.html">
+                    <i class="bi bi-dash-circle"></i>
+                    <span>Error 404</span>
+                </a>
+            </li><!-- End Error 404 Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-blank.html">
+                    <i class="bi bi-file-earmark"></i>
+                    <span>Blank</span>
+                </a>
+            </li><!-- End Blank Page Nav -->
+
+        </ul>
+
+    </aside><!-- End Sidebar-->
+
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+            <h1>Spinner Hadiah Utama</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item">Hadiah Utama</li>
+                </ol>
+            </nav>
+            <!-- <span id="sponsorDisplay" style="font-weight: bold; margin-left: 20px;">Sponsor: -</span> -->
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <form id="spinnerForm">
+                    <div class="form-container">
+                        <div class="col-md-6">
+                            <!-- <label for="eventSelect" class="form-label">Pilih Event</label> -->
+                            <select id="eventSelect" class="form-select" required>
+                                <option value="" selected disabled>Pilih Event</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- <label for="hadiahSelect" class="form-label">Pilih Hadiah</label> -->
+                            <select id="hadiahSelect" name="hadiah" class="form-select" required>
+                                <option value="" disabled selected>Pilih Hadiah</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="wheel">
+                <canvas id="canvas" width="500" height="500"></canvas>
+                <div class="center-circle" onclick="spin()">
+                    <div class="triangle">
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+
+
+            <div id="winnerModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="winner">Selamat! Kamu adalah pemenangnya!</p>
+                    <p>Hadiah: <span id="hadiahName"></span></p>
+                </div>
+            </div>
+
+            
+<!-- 
+<div class="modal" id="winnerModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Winner</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="winner"></p>
+                <p>Mendapatkan <span id="hadiahName"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+            
+        </section>
+    </main>
+
+
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            &copy; Developer by <strong><span>KAI DAOP 7</span></strong>. All Rights Reserved
+        </div>
+
+        <!-- Sponsor Section -->
+        <div class="sponsor" id="sponsorDisplay">
+            Sponsored by <strong><span>-</span></strong>
+        </div>
+    </footer><!-- End Footer -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+
+        const username = localStorage.getItem('username');
+
+        // Cek jika username ada di localStorage
+        if (username) {
+            // Tampilkan username di elemen dengan id 'displayUsername'
+            document.getElementById('displayUsername').textContent = username;
+        } else {
+            // Jika tidak ada username, redirect ke halaman login atau tampilkan pesan
+            console.log("No username found. Please login.");
+            window.location.href = "pages-login.html"; // Redirect ke halaman login jika diperlukan
+        }
+
+        document.getElementById("signOut").addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah reload halaman
+
+            // Hapus JWT token dari localStorage
+            localStorage.removeItem("jwtToken");
+            localStorage.removeItem("username");
+
+            // Arahkan user ke halaman login
+            window.location.href = "pages-login.html"; // Ganti dengan path halaman login Anda
+        });
+
+        const userRole = localStorage.getItem('role');
+
+        // Sembunyikan menu Mastering jika bukan Admin
+        if (userRole !== 'Admin') {
+            document.getElementById('mastering-menu').style.display = 'none';
+        }
+        // Fungsi untuk memuat data event ke dropdown
+        let hadiahData = {};
+        // select dropdown
+        document.addEventListener('DOMContentLoaded', function () {
+    const eventSelect = document.getElementById('eventSelect');
+    const hadiahSelect = document.getElementById('hadiahSelect');
+    const errorMessage = document.getElementById('error-message');
+
+    // Fetch data for events
+    fetch('http://127.0.0.1:8000/api/event/get-event')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                data.data.forEach(item => {
+                    const event = item.event;
+                    const option = document.createElement('option');
+                    option.value = event.id;
+                    option.text = `${event.nama_event} (${item.status})`;
+                    eventSelect.appendChild(option);
+                });
+            }
+        })
+        .catch(error => console.error('Error fetching events:', error));
+
+  // Fetch hadiah data
+eventSelect.addEventListener('change', function () {
+    hadiahSelect.innerHTML = '<option value="" disabled selected>Pilih Hadiah</option>';
+    fetch('http://127.0.0.1:8000/api/doorprize/get-hadiah')
+        .then(response => response.json())
+        .then(data => {
+            hadiahData = {}; // Reset hadiah data
+            const filteredHadiah = data.data.filter(hadiah => hadiah.kategori === 'utama');
+            filteredHadiah.forEach(hadiah => {
+                const option = document.createElement('option');
+                option.value = hadiah.id;  // Menggunakan hadiah.id sebagai value
+                option.text = `${hadiah.nama_hadiah} (Sisa: ${hadiah.jumlah_sisa})`;
+                hadiahSelect.appendChild(option);
+
+                // Simpan data hadiah menggunakan hadiah.id sebagai kunci
+                hadiahData[hadiah.id] = hadiah;
+            });
+            console.log('Hadiah Data:', hadiahData);
+        })
+        .catch(error => console.error('Error fetching hadiah:', error));
+});
+
+// Handle hadiah selection
+hadiahSelect.addEventListener('change', function () {
+    const selectedHadiahId = hadiahSelect.value;  // Mengambil ID hadiah yang dipilih
+    const selectedHadiah = hadiahData[selectedHadiahId];  // Ambil hadiah dari hadiahData berdasarkan ID
+
+    if (selectedHadiah) {
+        console.log('Selected Hadiah:', selectedHadiah);
+        // Implement any additional logic needed for the selected hadiah
+    } else {
+        console.error('Selected hadiah not found');
+    }
+});
+
+});
+
+        //spinwhell
+
+        function randomColor() {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    return { r, g, b };
+}
+
+function toRad(deg) {
+    return deg * (Math.PI / 180.0);
+}
+
+function randomRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function easeOutSine(x) {
+    return Math.sin((x * Math.PI) / 2);
+}
+
+function getPercent(input, min, max) {
+    return (((input - min) * 100) / (max - min)) / 100;
+}
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const width = canvas.width;
+const height = canvas.height;
+
+const centerX = width / 2;
+const centerY = height / 2;
+const radius = width / 2;
+
+let items = [];
+let itemIds = [];
+let currentDeg = 0;
+let step;
+let colors = [];
+let itemDegs = {};
+let speed = 0;
+let maxRotation = randomRange(360 * 3, 360 * 6);
+let pause = false;
+
+let fetchedData = {}; // Simpan hasil fetch data di sini
+async function fetchData() {
+    try {
+        // Fetch data kandidat utama
+        const responseUtama = await fetch('http://127.0.0.1:8000/api/kandidat-hadiah-utama/get');
+        const resultUtama = await responseUtama.json();
+
+        // Fetch data kandidat umum
+        const responseUmum = await fetch('http://127.0.0.1:8000/api/kandidat-hadiah-umum/get');
+        const resultUmum = await responseUmum.json();
+
+        // Ambil nama kandidat umum yang sudah menang
+        const menangUmumNames = resultUmum.data
+            .filter(kandidat => kandidat.status === 'sudah menang')
+            .map(kandidat => kandidat.nama);
+
+        // Filter kandidat utama yang statusnya 'belum menang' dan bukan kandidat umum yang sudah menang
+        items = resultUtama.data
+            .filter(kandidat => kandidat.status === 'belum menang' && !menangUmumNames.includes(kandidat.nama))
+            .map(kandidat => kandidat.nama);
+
+        itemIds = resultUtama.data
+            .filter(kandidat => kandidat.status === 'belum menang' && !menangUmumNames.includes(kandidat.nama))
+            .map(kandidat => kandidat.id);
+
+        // Simpan data yang di-fetch dalam fetchedData
+        fetchedData = {
+            data: resultUtama.data
+        };
+
+        // Buat roda dari kandidat yang tersisa
+        createWheel();
+
+    } catch (error) {
+        console.error('Error getting kandidat:', error);
+    }
+}
+
+function createWheel() {
+    step = 360 / items.length;
+    colors = [];
+    itemDegs = {}; // Reset itemDegs
+    for (let i = 0; i < items.length; i++) {
+        colors.push(randomColor());
+        const startDeg = i * step;
+        const endDeg = startDeg + step;
+        itemDegs[items[i]] = { startDeg, endDeg };
+    }
+    draw();
+    console.log('Items:', items);
+    console.log('Item Degrees:', itemDegs); // Pastikan itemDegs diisi dengan benar
+}
+
+function draw() {
+    ctx.clearRect(0, 0, width, height);
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius, toRad(0), toRad(360));
+    ctx.fillStyle = `rgb(${33},${33},${33})`;
+    ctx.lineTo(centerX, centerY);
+    ctx.fill();
+
+    let startDeg = currentDeg;
+    for (let i = 0; i < items.length; i++, startDeg += step) {
+        let endDeg = startDeg + step;
+        const color = colors[i];
+        const colorStyle = `rgb(${color.r},${color.g},${color.b})`;
+
+        // Draw segment background
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius - 2, toRad(startDeg), toRad(endDeg));
+        ctx.fillStyle = `rgb(${color.r - 30},${color.g - 30},${color.b - 30})`;
+        ctx.lineTo(centerX, centerY);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius - 30, toRad(startDeg), toRad(endDeg));
+        ctx.fillStyle = colorStyle;
+        ctx.lineTo(centerX, centerY);
+        ctx.fill();
+
+        // Draw text
+        ctx.save();
+        ctx.translate(centerX, centerY);
+        ctx.rotate(toRad((startDeg + endDeg) / 2));
+        ctx.textAlign = "center";
+        ctx.fillStyle = (color.r > 150 || color.g > 150 || color.b > 150) ? "#000" : "#fff";
+        ctx.font = 'bold 24px serif';
+        ctx.fillText(items[i], 130, 10);
+        ctx.restore();
+        // Store item degree ranges
+        itemDegs[items[i]] = { startDeg, endDeg };
+    }
+}
+
+async function updateKandidatStatus(id, status) {
+    try {
+        const response = await fetch(`http://127.0.0.1:8000/api/kandidat-hadiah-utama/update-status/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({ status })
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const result = await response.json();
+        console.log('Status update result:', result);
+    } catch (error) {
+        console.error('Error updating kandidat status:', error);
+    }
+}
+
+async function showModal() {
+    const modal = document.getElementById("winnerModal");
+    const hadiahNameElem = document.getElementById("hadiahName");
+
+    // Get selected hadiah ID from hadiahSelect
+    const selectedHadiahId = hadiahSelect.value;
+    const selectedHadiah = hadiahData[selectedHadiahId];
+
+    if (selectedHadiah) {
+        hadiahNameElem.textContent = selectedHadiah.nama_hadiah;
+    } else {
+        console.error('Hadiah tidak ditemukan untuk ID:', selectedHadiahId);
+    }
+    
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    const modal = document.getElementById("winnerModal");
+    modal.style.display = "none";
+    const selectedHadiahId = hadiahSelect.value;
+
+    if (selectedHadiahId) {
+    updateJumlahKeluar(selectedHadiahId).then(() => {
+             fetchData(); // Perbarui data kandidat setelah modal ditutup
+         });
+     } else {
+         fetchData(); // Perbarui data kandidat setelah modal ditutup
+     }
+}
+
+async function updateJumlahKeluar(id) {
+    try {
+        const token = localStorage.getItem('token');
+        const response = await fetch(`http://127.0.0.1:8000/api/doorprize/update-jumlah-keluar/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`Error: ${response.status} - ${errorText}`);
+        }
+    } catch (error) {
+        console.error(`Error updating jumlah keluar hadiah for ID ${id}:`, error);
+    }
+}
+
+
+async function saveRiwayat(eventId, hadiahId, pemenang, nipp, unit, jabatan) {
+    try {
+        const response = await fetch('http://127.0.0.1:8000/api/riwayat/add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                event_id: eventId,
+                doorprize_id: hadiahId,
+                pemenang: pemenang,
+                nipp: nipp,
+                unit: unit,
+                jabatan: jabatan
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to save riwayat');
+        }
+
+        const result = await response.json();
+        console.log('Riwayat saved:', result);
+    } catch (error) {
+        console.error('Error saving riwayat:', error);
+    }
+}
+
+// Mengatur event listener untuk tombol close
+document.querySelector(".close").addEventListener("click", closeModal);
+
+async function animate() {
+    if (pause) return;
+
+    speed = easeOutSine(getPercent(currentDeg, maxRotation, 0)) * 20;
+    if (speed < 0.01) {
+        speed = 0;
+        pause = true;
+
+        // Normalisasi currentDeg agar selalu dalam 0-360 derajat
+        let finalDeg = (currentDeg % 360 + 360) % 360;
+
+        // Definisikan nilai endDeg target
+        const targetEndDeg = 2021.365410349766;
+        const tolerance = 10; // Rentang toleransi dalam derajat
+
+        // Cari nama pemenang berdasarkan derajat akhir
+        let winner;
+        let winnerId, winnerUnit, winnerJabatan;
+        console.log('Item Degrees:', itemDegs);
+
+        for (let item in itemDegs) {
+            let { startDeg, endDeg } = itemDegs[item];
+
+            // Normalisasi startDeg dan endDeg agar berada dalam rentang 0-360 derajat
+            let normalizedEndDeg = (endDeg % 360 + 360) % 360;
+
+            // Cek jika endDeg mendekati finalDeg dalam rentang toleransi
+            if (Math.abs(normalizedEndDeg - finalDeg) <= tolerance ||
+                (normalizedEndDeg < tolerance && (finalDeg >= normalizedEndDeg || finalDeg < (tolerance - normalizedEndDeg)))) {
+                winner = item;
+                break;
+            }
+        }
+
+        if (winner) {
+            console.log('Winner:', winner);
+            winnerId = itemIds[items.indexOf(winner)];
+
+            // Temukan kandidat berdasarkan winnerId dari fetchedData
+            const kandidat = fetchedData.data.find(kandidat => kandidat.id === winnerId);
+
+            // Tampilkan informasi tambahan unit dan jabatan jika kandidat ditemukan
+            if (kandidat) {
+                console.log(`Pemenang: ${kandidat.nama}, Unit: ${kandidat.unit}, Jabatan: ${kandidat.jabatan}`);
+                winnerUnit = kandidat.unit;
+                winnerJabatan = kandidat.jabatan;
+
+                await updateKandidatStatus(winnerId, 'sudah menang');
+                const selectedEventId = eventSelect.value;
+                const selectedHadiahId = hadiahSelect.value;
+
+                await saveRiwayat(selectedEventId, selectedHadiahId, winner, kandidat.nipp, winnerUnit, winnerJabatan);
+
+                document.getElementById("winner").textContent = `Pemenangnya adalah ${winner}`;
+                showModal();
+            } else {
+                console.log('Kandidat tidak ditemukan untuk winnerId:', winnerId);
+            }
+        } else {
+            console.log('No winner found');
+        }
+        return;
+    }
+
+    currentDeg += speed;
+    draw();
+    window.requestAnimationFrame(animate);
+}
+
+function spin() {
+    if (speed !== 0) return;
+
+    currentDeg = 0;
+    pause = false;
+    draw();
+    maxRotation = randomRange(360 * 3, 360 * 6);
+    window.requestAnimationFrame(animate);
+}
+
+window.onload = fetchData;
+
+    </script>
+    <style>
+        /* form atas */
+        .grid-cols-5 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        .kandidat-item {
+            background-color: grey;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .highlight {
+            background-color: red;
+            transition: background-color 0.1s ease-in-out;
+        }
+
+        .form-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-container .col-md-6 {
+            flex: 1;
+        }
+
+        .col-md-3 {
+            margin-bottom: 20px;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .sponsor {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .sponsor strong {
+            color: #000;
+        }
+
+        /* endform */
+
+        /* spinwhell */
+
+/* Modal background */
+.modal {
+    display: none; /* Secara default, modal tidak ditampilkan */
+    position: fixed;
+    z-index: 1; /* Di atas elemen lain */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center; /* Pusatkan horizontal */
+    align-items: center; /* Pusatkan vertikal */
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Warna latar belakang */
+    background-color: rgba(0,0,0,0.4); /* Transparansi */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+        .wheel {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .center-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 60px;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .triangle {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;   /* Diperbesar dari 10px menjadi 20px */
+    border-bottom: 20px solid transparent; /* Diperbesar dari 10px menjadi 20px */
+    border-right: 60px solid red;        /* Diperbesar dari 30px menjadi 60px */
+    position: absolute;
+    top: 50%;
+    right: -220%;
+    transform: translateY(-50%);
+}
+
+    </style>
+</body>
+
+</html>

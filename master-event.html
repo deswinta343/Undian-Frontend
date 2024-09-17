@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Undian DAOP 7</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/rb-logo.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+            <a href="dahsboard.html" class="logo d-flex align-items-center">
+              <img src="assets/img/rb-logo.png" alt="">
+              <span class="d-none d-lg-block">UNDIAN DAOP 7</span>
+            </a>
+          </div><!-- End Logo -->
+      
+
+        <!-- <div class="search-bar">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            </form>
+        </div> -->
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+                <li class="nav-item dropdown pe-3">
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="assets/img/user-profile.png" alt="Profile" class="rounded-circle">
+                        <span id="displayUsername" class="d-none d-md-block dropdown-toggle ps-2"></span>
+                    </a><!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#" id="signOut">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Log out</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- End Profile Dropdown Items -->
+                </li>
+                <!-- End Profile Nav -->
+
+            </ul>
+        </nav><!-- End Icons Navigation -->
+
+    </header><!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+    
+            <li class="nav-item">
+                <a class="nav-link" href="dahsboard.html">
+                    <i class="bi bi-house-door"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link " href="history.html">
+                    <i class="bi bi-grid"></i>
+                    <span>History</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+            
+            <li class="nav-item">
+                <a class="nav-link" href="master-user.html">
+                    <i class="bi bi-person-circle"></i>
+                    <span>Master User</span>
+                </a>
+            </li><!-- End Master User Nav -->
+            
+            <li class="nav-item">
+                <a class="nav-link" href="master-kandidat-HG.html">
+                    <i class="bi bi-person-badge"></i>
+                    <span>Master Kandidat</span>
+                </a>
+            </li><!-- End Master Kandidat Nav -->
+            
+            <li class="nav-item">
+                <a class="nav-link" href="master-event.html">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>Master Event</span>
+                </a>
+            </li><!-- End Master Event Nav -->
+            <li class="nav-item">
+                <a class="nav-link" href="master-doorprize.html">
+                    <i class="bi bi-gift"></i>
+                    <span>Master Doorprize</span>
+                </a>
+            </li><!-- End Master Doorprize Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-error-404.html">
+                  <i class="bi bi-dash-circle"></i>
+                  <span>Error 404</span>
+                </a>
+              </li><!-- End Error 404 Page Nav -->
+        
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-blank.html">
+                  <i class="bi bi-file-earmark"></i>
+                  <span>Blank</span>
+                </a>
+              </li><!-- End Blank Page Nav -->
+        
+            </ul>
+
+
+    </aside><!-- End Sidebar-->
+
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+            <h1>Master Event</h1>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <nav>
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="dahsboard.html">Kembali</a></li>
+                        <!-- <li class="breadcrumb-item">Tabel</li> -->
+                        <li class="breadcrumb-item active">Data Event</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- <div class="container mx-auto"> -->
+
+        <div class="flex justify-between items-center mb-4">
+            <!-- Tombol Add User dengan ikon -->
+            <a href="#" class="btn btn-primary d-flex items-center" data-bs-toggle="modal"
+                data-bs-target="#verticalycentered">
+                <i class="bi bi-person-plus-fill me-2"></i> <!-- Ikon Add User -->
+                <span>Tambah Data Event</span>
+            </a>
+
+            <!-- Search Bar -->
+            <input type="text" id="searchQuery" placeholder="Search..."
+                class="w-full max-w-xs px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <!-- Tabel Data Admin -->
+        <div class="overflow-x-auto rounded-lg border border-gray-200">
+            <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+                <thead class="ltr:text-left rtl:text-right">
+                    <tr>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">No</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Nama Event</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Status</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Tanggal Mulai</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Tanggal Selesai</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Action</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Created adt</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Updated at</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200" id="dataEvent">
+                </tbody>
+            </table>
+
+            <!-- Pagination Controls -->
+            <div id="paginationControls" class="flex justify-center mt-4"></div>
+        </div>
+        <!-- </div> -->
+
+        <!-- </div> -->
+
+    </main><!-- End #main -->
+
+    <!-- modal add -->
+    <!-- Modal -->
+    <div class="modal fade" id="verticalycentered" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm-custom">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Multi Columns Form -->
+                    <form id="addEventForm" class="row g-3">
+                        <div class="col-md-12">
+                            <label for="inputNamaEvent" class="form-label">Nama Event</label>
+                            <input type="text" class="form-control" id="inputNamaEvent" name="nama_event" placeholder="Masukkan nama event" required>
+                            <div id="errorNamaEvent" class="text-danger"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputTanggalMulai" class="form-label">Tanggal Mulai</label>
+                            <input type="date" class="form-control" id="inputTanggalMulai" name="tanggal_mulai" required>
+                            <div id="errorTanggalMulai" class="text-danger"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputTanggalSelesai" class="form-label">Tanggal Selesai</label>
+                            <input type="date" class="form-control" id="inputTanggalSelesai" name="tanggal_selesai" required>
+                            <div id="errorTanggalSelesai" class="text-danger"></div>
+                        </div>
+                        <!-- <div class="col-md-12">
+                            <label for="inputTotalPemenang" class="form-label">Total Pemenang</label>
+                            <input type="number" class="form-control" id="inputTotalPemenang" name="total_pemenang" placeholder="Masukkan total pemenang" required min="1">
+                            <div id="errorTotalPemenang" class="text-danger"></div>
+                        </div> -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form><!-- End Multi Columns Form -->
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- end modal add -->
+
+    <!-- Modal Edit event -->
+<div id="editEventModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div class="bg-white w-full max-w-lg mx-auto rounded shadow-lg p-6 relative">
+        <h2 class="text-2xl font-bold mb-4">Edit Event</h2>
+        <form id="editForm" class="space-y-4">
+            <input type="hidden" id="editEventId">
+            <div>
+                <label class="block text-sm font-medium mb-2">Nama event</label>
+                <input type="text" id="editNamaEvent" class="w-full border rounded px-3 py-2">
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-2">Tanggal Mulai</label>
+                <input type="date" id="editTanggalMulai" class="w-full border rounded px-3 py-2">
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-2">Tanggal Selesai</label>
+                <input type="date" id="editTanggalSelesai" class="w-full border rounded px-3 py-2">
+            </div>
+            <!-- <div>
+                <label class="block text-sm font-medium mb-2">Jumlah Pemenang</label>
+                <input type="number" id="editJumlahPemenang" class="w-full border rounded px-3 py-2">
+            </div> -->
+            <div class="flex justify-between">
+                <button type="button" id="closeEditModalBtn" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+                    Batal
+                </button>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    Simpan perubahan
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+ <!-- delete Modal -->
+ <div class="modal fade" id="allert-delete" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Hapus data?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Data akan dihapus secara permanen.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">tidak</button>
+                <button type="button" class="btn btn-primary" onclick="confirmDelete()">ya</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            &copy; Developer by <strong><span>KAI DAOP 7</span></strong>. All Rights Reserved
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+
+function validatePasswords() {
+    var password = document.getElementById("inputPassword").value;
+    var passwordAgain = document.getElementById("inputPasswordAgain").value;
+
+    if (password !== passwordAgain) {
+        alert("Passwords do not match. Please try again.");
+        return false; // Mencegah pengiriman form jika password tidak cocok
+    }
+    return true; // Lanjutkan pengiriman form jika password cocok
+}
+        // Ambil username dari localStorage
+        const username = localStorage.getItem('username');
+
+        // Cek jika username ada di localStorage
+        if (username) {
+            // Tampilkan username di elemen dengan id 'displayUsername'
+            document.getElementById('displayUsername').textContent = username;
+        } else {
+            // Jika tidak ada username, redirect ke halaman login atau tampilkan pesan
+            console.log("No username found. Please login.");
+            window.location.href = "pages-login.html"; // Redirect ke halaman login jika diperlukan
+        }
+    </script>
+    <script>
+
+   document.getElementById('searchQuery').addEventListener('input', function () {
+        const searchQuery = this.value;
+
+        // Kirim query pencarian ke backend saat input berubah
+        fetchData(searchQuery);
+    });
+
+    function fetchData(searchQuery) {
+    fetch('http://127.0.0.1:8000/api/event/filterEvent', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+        },
+        body: JSON.stringify({ 
+            nama_event: searchQuery, // Mengirimkan query pencarian dengan key 'nama_event'
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Filtered Data:', data);
+        // Proses data untuk ditampilkan di tabel
+        updateTable(data);
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+function updateTable(data) {
+    const tableBody = document.getElementById('dataEvent');
+    if (tableBody) {
+        tableBody.innerHTML = ''; // Kosongkan tabel terlebih dahulu
+
+        if (Array.isArray(data.data)) {
+            // Cek jika 'data' adalah array
+            data.data.forEach((item, index) => {
+                const row = `
+                    <tr>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${index + 1}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.nama_event}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.tanggal_mulai}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.tanggal_selesai}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">
+                            <button class="edit-button bg-blue-500 text-white px-2 py-1 rounded" onclick="editEvent(${item.id})">Edit</button>
+                            <button class="delete-button bg-red-500 text-white px-2 py-1 rounded" onclick="showDeleteModal(${item.id})">Delete</button>
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">
+                            ${new Date(item.created_at).toLocaleDateString('en-GB')} ${new Date(item.created_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">
+                            ${new Date(item.updated_at).toLocaleDateString('en-GB')} ${new Date(item.updated_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+                        </td>
+                    </tr>
+                `;
+                tableBody.insertAdjacentHTML('beforeend', row); // Tambahkan row ke tabel
+            });
+        } else {
+            console.error('Data format is incorrect. Expected "data" to be an array.');
+        }
+    }
+}
+
+
+    </script>
+
+    <script>
+        document.getElementById("signOut").addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah reload halaman
+
+            // Hapus JWT token dari localStorage
+            localStorage.removeItem("jwtToken");
+            localStorage.removeItem("username");
+
+            // Arahkan user ke halaman login
+            window.location.href = "pages-login.html"; // Ganti dengan path halaman login Anda
+        });
+    </script>
+
+<script>
+   let eventIdToDelete = null;
+
+function showDeleteModal(id) {
+    eventIdToDelete = id;
+    // Gunakan Bootstrap untuk membuka modal
+    var myModal = new bootstrap.Modal(document.getElementById('allert-delete'));
+    myModal.show();
+}
+
+function confirmDelete() {
+    if (eventIdToDelete !== null) { // Perbaiki huruf besar-kecil di sini
+        // Panggil fungsi untuk menghapus data admin
+        deleteEvent(eventIdToDelete);
+    }
+}
+
+function deleteEvent(id) {
+    fetch(`http://127.0.0.1:8000/api/event/delete-event/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message) {
+            alert('Event deleted successfully');
+            loadDataTabel(); // Contoh: Refresh halaman setelah berhasil hapus
+        } else {
+            alert('Error: ' + data.error);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+</script>
+
+    <script>
+// Panggil fungsi untuk memuat data tabel ketika halaman dimuat
+document.addEventListener('DOMContentLoaded', loadDataTabel);
+
+// Fungsi untuk memuat data tabel
+function loadDataTabel() {
+    fetch('http://127.0.0.1:8000/api/event/get-event', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+        }
+    })
+    .then(response => {
+        console.log('Response Status:', response.status); // Cek status response
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Data fetched:', data); // Cek data yang diterima
+
+        const tableBody = document.getElementById('dataEvent');
+        if (!tableBody) {
+            console.error('Element with id "dataEvent" not found.');
+            return;
+        }
+
+        tableBody.innerHTML = ''; // Kosongkan tabel terlebih dahulu
+
+        // Periksa apakah data.data berupa array
+        if (Array.isArray(data.data)) {
+            console.log('Events array:', data.data); // Cek array events
+            data.data.forEach((item, index) => {
+                const row = `
+                    <tr>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${index + 1}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.event.nama_event}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.status}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.event.tanggal_mulai}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.event.tanggal_selesai}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">
+                            <button class="edit-button bg-blue-500 text-white px-2 py-1 rounded" onclick="editEvent(${item.event.id})">Edit</button>
+                            <button class="delete-button bg-red-500 text-white px-2 py-1 rounded" onclick="showDeleteModal(${item.event.id})">Delete</button>
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">
+                            ${new Date(item.event.created_at).toLocaleDateString('en-GB')} ${new Date(item.event.created_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">
+                            ${new Date(item.event.updated_at).toLocaleDateString('en-GB')} ${new Date(item.event.updated_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+                        </td>
+                    </tr>
+                `;
+                tableBody.insertAdjacentHTML('beforeend', row); // Tambahkan row ke tabel
+            });
+        } else {
+            console.error('Data format is incorrect. Expected "data" to be an array.');
+        }
+    })
+    .catch(error => console.error('Error fetching data:', error));
+}
+
+// Event Listener untuk form tambah event
+document.getElementById('addEventForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Mencegah form dari submit secara default
+
+    // Kosongkan pesan error
+    document.getElementById('errorNamaEvent').textContent = '';
+    document.getElementById('errorTanggalMulai').textContent = '';
+    document.getElementById('errorTanggalSelesai').textContent = '';
+
+    // Ambil data dari form
+    const formData = new FormData(this);
+
+    // Konversi FormData menjadi objek JSON
+    const data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    // Validasi tanggal
+    const tanggalMulai = new Date(data.tanggal_mulai);
+    const tanggalSelesai = new Date(data.tanggal_selesai);
+
+    if (tanggalSelesai <= tanggalMulai) {
+        document.getElementById('errorTanggalSelesai').textContent = 'Tanggal selesai harus setelah tanggal mulai!';
+        return; // Hentikan pengiriman form
+    }
+
+    // Kirim data ke endpoint
+    fetch('http://127.0.0.1:8000/api/event/add-event', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(result => {
+        console.log('Success:', result);
+        alert('Event successfully added!');
+        const modal = bootstrap.Modal.getInstance(document.getElementById('verticalycentered'));
+        modal.hide();
+        document.getElementById('addEventForm').reset();
+        loadDataTabel(); // Reload data after successful addition
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred!');
+    });
+});
+
+// Fungsi untuk memuat data tabel (ditempatkan di sini hanya sebagai contoh, seharusnya sudah ada sebelumnya)
+function loadDataTabel() {
+    fetch('http://127.0.0.1:8000/api/event/get-event', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+        }
+    })
+    .then(response => {
+        console.log('Response Status:', response.status);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Data fetched:', data);
+
+        const tableBody = document.getElementById('dataEvent');
+        if (!tableBody) {
+            console.error('Element with id "dataEvent" not found.');
+            return;
+        }
+
+        tableBody.innerHTML = '';
+
+        if (Array.isArray(data.data)) {
+            console.log('Events array:', data.data);
+            data.data.forEach((item, index) => {
+                const row = `
+                    <tr>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${index + 1}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.event.nama_event}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.status}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.event.tanggal_mulai}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.event.tanggal_selesai}</td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">
+                            <button class="edit-button bg-blue-500 text-white px-2 py-1 rounded" onclick="editEvent(${item.event.id})">Edit</button>
+                            <button class="delete-button bg-red-500 text-white px-2 py-1 rounded" onclick="showDeleteModal(${item.event.id})">Delete</button>
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">
+                            ${new Date(item.event.created_at).toLocaleDateString('en-GB')} ${new Date(item.event.created_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+                        </td>
+                        <td class="whitespace-nowrap px-5 py-1 text-center">
+                            ${new Date(item.event.updated_at).toLocaleDateString('en-GB')} ${new Date(item.event.updated_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+                        </td>
+                    </tr>
+                `;
+                tableBody.insertAdjacentHTML('beforeend', row);
+            });
+        } else {
+            console.error('Data format is incorrect. Expected "data" to be an array.');
+        }
+    })
+    .catch(error => console.error('Error fetching data:', error));
+}
+
+// Elements for Edit Modal
+const editEventModal = document.getElementById('editEventModal');
+const closeEditModalBtn = document.getElementById('closeEditModalBtn');
+const editForm = document.getElementById('editForm');
+
+// Show Modal
+function editEvent(id) {
+    fetch(`http://127.0.0.1:8000/api/event/get-event/${id}`)
+    .then(response => response.json())
+    .then(response => {
+        const event = response.data.event;
+        
+        document.getElementById('editEventId').value = event.id;
+        document.getElementById('editNamaEvent').value = event.nama_event;
+        document.getElementById('editTanggalMulai').value = event.tanggal_mulai;
+        document.getElementById('editTanggalSelesai').value = event.tanggal_selesai;
+        
+        editEventModal.classList.remove('hidden');
+    })
+    .catch(error => {
+        console.error('Error fetching event data:', error);
+    });
+}
+
+// Hide Modal
+closeEditModalBtn.addEventListener('click', () => {
+    editEventModal.classList.add('hidden');
+});
+
+// Handle form submission for editing event
+editForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const id = document.getElementById('editEventId').value;
+    const nama_event = document.getElementById('editNamaEvent').value;
+    const tanggal_mulai = document.getElementById('editTanggalMulai').value;
+    const tanggal_selesai = document.getElementById('editTanggalSelesai').value;
+
+    try {
+        const response = await fetch(`http://127.0.0.1:8000/api/event/edit-event/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+            },
+            body: JSON.stringify({
+                nama_event,
+                tanggal_mulai,
+                tanggal_selesai,
+            }),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            alert('Event updated successfully');
+            editEventModal.classList.add('hidden');
+            loadDataTabel(); // Reload the table data
+        } else {
+            alert('Error: ' + result.error);
+        }
+    } catch (error) {
+        console.error('Error updating event:', error);
+        alert('An error occurred while updating the event.');
+    }
+});
+
+
+    </script>
+</body>
+
+</html>

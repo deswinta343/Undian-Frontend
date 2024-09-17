@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Undian DAOP 7</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/rb-logo.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+            <a href="dahsboard.html" class="logo d-flex align-items-center">
+              <img src="assets/img/rb-logo.png" alt="">
+              <span class="d-none d-lg-block">UNDIAN DAOP 7</span>
+            </a>
+          </div><!-- End Logo -->
+      
+
+        <!-- <div class="search-bar">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            </form>
+        </div> -->
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+                <li class="nav-item dropdown pe-3">
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="assets/img/user-profile.png" alt="Profile" class="rounded-circle">
+                        <span id="displayUsername" class="d-none d-md-block dropdown-toggle ps-2"></span>
+                    </a><!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#" id="signOut">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Log out</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- End Profile Dropdown Items -->
+                </li>
+                <!-- End Profile Nav -->
+
+            </ul>
+        </nav><!-- End Icons Navigation -->
+
+    </header><!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+    
+            <li class="nav-item">
+                <a class="nav-link" href="dahsboard.html">
+                    <i class="bi bi-house-door"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link " href="history.html">
+                    <i class="bi bi-grid"></i>
+                    <span>History</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+            
+            <li class="nav-item">
+                <a class="nav-link" href="master-user.html">
+                    <i class="bi bi-person-circle"></i>
+                    <span>Master User</span>
+                </a>
+            </li><!-- End Master User Nav -->
+            
+            <li class="nav-item">
+                <a class="nav-link" href="master-kandidat-HG.html">
+                    <i class="bi bi-person-badge"></i>
+                    <span>Master Kandidat</span>
+                </a>
+            </li><!-- End Master Kandidat Nav -->
+            
+            <li class="nav-item">
+                <a class="nav-link" href="master-event.html">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>Master Event</span>
+                </a>
+            </li><!-- End Master Event Nav -->
+            
+            <li class="nav-item">
+                <a class="nav-link" href="master-doorprize.html">
+                    <i class="bi bi-gift"></i>
+                    <span>Master Doorprize</span>
+                </a>
+            </li><!-- End Master Doorprize Nav -->
+            
+    
+          <!-- <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+              <i class="bi bi-layout-text-window-reverse"></i><span>Mastering Data</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+              <li>
+                <a href="master-user.html">
+                  <i class="bi bi-circle"></i><span>Master User</span>
+                </a>
+              </li>
+              <li>
+                <a href="master-kandidat-HG.html">
+                  <i class="bi bi-circle"></i><span>Master Data Personal</span>
+                </a>
+              </li>
+              <li>
+                <a href="tables-data.html">
+                  <i class="bi bi-circle"></i><span>Master Event</span>
+                </a>
+              </li>
+              <li>
+                <a href="master-doorprize.html">
+                  <i class="bi bi-circle"></i><span>Master Doorprize</span>
+                </a>
+              </li>
+            </ul>
+          </li>End Tables Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-error-404.html">
+                  <i class="bi bi-dash-circle"></i>
+                  <span>Error 404</span>
+                </a>
+              </li><!-- End Error 404 Page Nav -->
+        
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-blank.html">
+                  <i class="bi bi-file-earmark"></i>
+                  <span>Blank</span>
+                </a>
+              </li><!-- End Blank Page Nav -->
+        
+            </ul>
+
+
+    </aside><!-- End Sidebar-->
+
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+            <h1>Tabel Data Master</h1>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <nav>
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="dahsboard.html">Kembali</a></li>
+                        <!-- <li class="breadcrumb-item">Tabel</li> -->
+                        <li class="breadcrumb-item active">Tabel Data</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- <div class="container mx-auto"> -->
+
+        <div class="flex justify-between items-center mb-4">
+            <!-- Tombol Add User dengan ikon -->
+            <a href="#" class="btn btn-primary d-flex items-center" data-bs-toggle="modal"
+                data-bs-target="#verticalycentered">
+                <i class="bi bi-person-plus-fill me-2"></i> <!-- Ikon Add User -->
+                <span>Tambah Data Privilage</span>
+            </a>
+
+            <!-- Search Bar -->
+            <input type="text" id="searchQuery" placeholder="Search..."
+                class="w-full max-w-xs px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <!-- Tabel Data Admin -->
+        <div class="overflow-x-auto rounded-lg border border-gray-200">
+            <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+                <thead class="ltr:text-left rtl:text-right">
+                    <tr>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">No</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">NIPP</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Nama</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Jabatan</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Role</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Unit</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Action</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Created adt</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Updated at</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200" id="dataAdminTable">
+                </tbody>
+            </table>
+
+            <!-- Pagination Controls -->
+            <div id="paginationControls" class="flex justify-center mt-4"></div>
+        </div>
+        <!-- </div> -->
+
+        <!-- </div> -->
+
+    </main><!-- End #main -->
+
+    <!-- modal add -->
+    <!-- Modal -->
+    <div class="modal fade" id="verticalycentered" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm-custom">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Multi Columns Form -->
+                    <form id="addUserForm" class="row g-3" onsubmit="return validatePasswords()">
+                        <div class="col-md-12">
+                            <label for="inputNama" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="inputNama" name="nama" placeholder="masukkan nama" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputNIIP" class="form-label">NIPP</label>
+                            <input type="text" class="form-control" id="inputNIIP" name="niip" placeholder="masukkan nipp" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputJabatan" class="form-label">Jabatan</label>
+                            <input type="text" class="form-control" id="inputJabatan" name="jabatan" placeholder="masukkan Jabatan" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputRole" class="form-label">Role</label>
+                            <select id="inputRole" name="role" class="form-select" required>
+                                <option selected disabled>Pilih...</option>
+                                <option value="Admin">Admin</option>
+                                <option value="General">Umum</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label for="inputUnit" class="form-label">Unit</label>
+                            <input type="text" class="form-control" id="inputUnit" name="unit" placeholder="masukkan unit" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" name="password" placeholder="buat Password" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPasswordAgain" class="form-label">Password ulang</label>
+                            <input type="password" class="form-control" id="inputPasswordAgain" name="password_again" placeholder="masukkan password ulang" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form><!-- End Multi Columns Form -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end modal add -->
+
+    <!-- Modal Edit Admin -->
+<div id="editAdminModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div class="bg-white w-full max-w-lg mx-auto rounded shadow-lg p-6 relative">
+        <h2 class="text-2xl font-bold mb-4">Edit Admin</h2>
+        <form id="editForm" class="space-y-4">
+            <input type="hidden" id="editAdminId">
+            <div>
+                <label class="block text-sm font-medium mb-2">NIPP</label>
+                <input type="text" id="editNiip" class="w-full border rounded px-3 py-2">
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-2">Nama</label>
+                <input type="text" id="editNama" class="w-full border rounded px-3 py-2">
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-2">Jabatan</label>
+                <input type="text" id="editJabatan" class="w-full border rounded px-3 py-2">
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-2">Unit</label>
+                <input type="text" id="editUnit" class="w-full border rounded px-3 py-2">
+            </div>
+            <div>
+                <label class="block text-sm font-medium mb-2">Role</label>
+                <select id="editRole" class="form-select" required>
+                    <option selected disabled>Pilih...</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Umum">Umum</option>
+                </select>
+            </div>
+            <div class="flex justify-between">
+                <button type="button" id="closeEditModalBtn" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+                    Batal
+                </button>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    Simpan perubahan
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+ <!-- delete Modal -->
+ <div class="modal fade" id="allert-delete" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Hapus data?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Data akan dihapus secara permanen.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">tidak</button>
+                <button type="button" class="btn btn-primary" onclick="confirmDelete()">ya</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            &copy; Developer by <strong><span>KAI DAOP 7</span></strong>. All Rights Reserved
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+
+function validatePasswords() {
+    var password = document.getElementById("inputPassword").value;
+    var passwordAgain = document.getElementById("inputPasswordAgain").value;
+
+    if (password !== passwordAgain) {
+        alert("Passwords do not match. Please try again.");
+        return false; // Mencegah pengiriman form jika password tidak cocok
+    }
+    return true; // Lanjutkan pengiriman form jika password cocok
+}
+        // Ambil username dari localStorage
+        const username = localStorage.getItem('username');
+
+        // Cek jika username ada di localStorage
+        if (username) {
+            // Tampilkan username di elemen dengan id 'displayUsername'
+            document.getElementById('displayUsername').textContent = username;
+        } else {
+            // Jika tidak ada username, redirect ke halaman login atau tampilkan pesan
+            console.log("No username found. Please login.");
+            window.location.href = "pages-login.html"; // Redirect ke halaman login jika diperlukan
+        }
+    </script>
+    <script>
+   document.getElementById('searchQuery').addEventListener('input', function () {
+        const searchQuery = this.value;
+
+        // Kirim query pencarian ke backend saat input berubah
+        fetchData(searchQuery);
+    });
+
+    function fetchData(searchQuery) {
+        fetch('http://127.0.0.1:8000/api/auth/filterAdmins', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+            },
+            body: JSON.stringify({ 
+                search: searchQuery, // Mengirimkan query pencarian ke backend
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Filtered Data:', data);
+            // Proses data untuk ditampilkan di tabel
+            updateTable(data);
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    function updateTable(data) {
+        // Fungsi untuk mengupdate tabel berdasarkan data yang difilter
+        console.table(data.admins);
+    }
+
+        function updateTable(data) {
+            const tableBody = document.getElementById('dataAdminTable');
+            if (tableBody) {
+                tableBody.innerHTML = ''; // Kosongkan tabel terlebih dahulu
+
+                if (Array.isArray(data.admins)) {
+                    data.admins.forEach((item, index) => {
+                        const row = `
+<tr>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${index + 1}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${item.niip}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${item.nama}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${item.jabatan}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${item.role}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${item.unit || '-'}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">
+      <button class="edit-button bg-blue-500 text-white px-2 py-1 rounded" onclick="editAdmin(${item.id})">Edit</button>
+      <button class="delete-button bg-red-500 text-white px-2 py-1 rounded" onclick="showDeleteModal(${item.id})">Delete</button>
+      <button class="reset-button bg-green-500 text-black px-2 py-1 rounded" onclick="redirectToResetPassword(${item.id})">Reset Password</button>
+    </td>
+    </td>
+      <td class="whitespace-nowrap px-5 py-1 text-center">
+  ${new Date(item.created_at).toLocaleDateString('en-GB')} ${new Date(item.created_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+</td>
+  <td class="whitespace-nowrap px-5 py-1 text-center">
+  ${new Date(item.updated_at).toLocaleDateString('en-GB')} ${new Date(item.updated_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+</td>
+
+</tr>
+
+
+                `;
+                        tableBody.insertAdjacentHTML('beforeend', row); // Tambahkan row ke tabel
+                    });
+                } else {
+                    console.error('Data format is incorrect. Expected "admins" to be an array.');
+                }
+            }
+        }
+
+    </script>
+
+    <script>
+        document.getElementById("signOut").addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah reload halaman
+
+            // Hapus JWT token dari localStorage
+            localStorage.removeItem("jwtToken");
+            localStorage.removeItem("username");
+
+            // Arahkan user ke halaman login
+            window.location.href = "pages-login.html"; // Ganti dengan path halaman login Anda
+        });
+    </script>
+
+<script>
+    let adminIdToDelete = null;
+
+    function showDeleteModal(id) {
+        adminIdToDelete = id;
+        // Gunakan Bootstrap untuk membuka modal
+        var myModal = new bootstrap.Modal(document.getElementById('allert-delete'));
+        myModal.show();
+    }
+
+    function confirmDelete() {
+        if (adminIdToDelete !== null) {
+            // Panggil fungsi untuk menghapus data admin
+            deleteAdmin(adminIdToDelete);
+        }
+    }
+    function deleteAdmin(id) {
+        fetch(`http://127.0.0.1:8000/api/auth/admin/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+                }
+            })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                alert('Admin deleted successfully');
+                // Lakukan refresh atau update UI sesuai kebutuhan
+                location.reload(); // Contoh: Refresh halaman setelah berhasil hapus
+            } else {
+                alert('Error: ' + data.error);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>
+
+    <script>
+        // Deklarasi fungsi loadDataTabel di global scope
+        function loadDataTabel() {
+            let perPage = 10;
+            console.log(localStorage.getItem('jwtToken'))
+            fetch('http://127.0.0.1:8000/api/auth/dataAdmin', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+                }
+            })
+                .then(response => response.json())  // Ubah response menjadi objek JSON
+                .then(data => {
+                    console.log('Data fetched:', data.admins); // Cek data yang diterima
+
+                    const tableBody = document.getElementById('dataAdminTable');
+                    if (!tableBody) {
+                        console.error('Element with id "dataAdminTable" not found.');
+                        return;
+                    }
+
+                    tableBody.innerHTML = ''; // Kosongkan tabel terlebih dahulu
+
+                    // Periksa apakah data.admins berupa array
+                    if (Array.isArray(data.admins)) {
+                        data.admins.forEach((item, index) => {
+                            const row = `
+                 <tr>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${index + 1}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${item.niip}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${item.nama}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${item.jabatan}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${item.role}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">${item.unit || '-'}</td>
+    <td class="whitespace-nowrap px-5 py-1 text-center">
+      <button class="edit-button bg-blue-500 text-white px-2 py-1 rounded" onclick="editAdmin(${item.id})">Edit</button>
+      <button class="delete-button bg-red-500 text-white px-2 py-1 rounded" onclick="showDeleteModal(${item.id})">Delete</button>
+       <button class="reset-button bg-green-500 text-black px-2 py-1 rounded" onclick="redirectToResetPassword(${item.id})">Reset Password</button>
+    </td>
+    </td>
+          <td class="whitespace-nowrap px-5 py-1 text-center">
+  ${new Date(item.created_at).toLocaleDateString('en-GB')} ${new Date(item.created_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+</td>
+<td class="whitespace-nowrap px-5 py-1 text-center">
+  ${new Date(item.updated_at).toLocaleDateString('en-GB')} ${new Date(item.updated_at).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}
+</td>
+
+</tr>
+                    `;
+                            tableBody.insertAdjacentHTML('beforeend', row); // Tambahkan row ke tabel
+                        });
+                    } else {
+                        console.error('Data format is incorrect. Expected "admins" to be an array.');
+                    }
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        document.getElementById('addUserForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Mencegah form dari submit secara default
+
+    // Ambil data dari form
+    const formData = new FormData(this);
+
+    // Konversi FormData menjadi objek JSON
+    const data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    // Kirim data ke endpoint
+    fetch('http://127.0.0.1:8000/api/auth/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+        },
+        body: JSON.stringify(data),
+    })
+        .then(response => response.json())
+        .then(result => {
+            console.log('Success:', result);
+            // Tampilkan pesan sukses atau lakukan tindakan lain
+            alert('User successfully added!');
+            // Tutup modal jika perlu
+            const modal = bootstrap.Modal.getInstance(document.getElementById('verticalycentered'));
+            modal.hide();
+            // Reset form setelah submit berhasil
+            document.getElementById('addUserForm').reset();
+            // Muat ulang data tabel setelah user berhasil ditambahkan
+            loadDataTabel();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred!');
+        });
+});
+
+// Panggil fungsi untuk memuat data tabel ketika halaman dimuat
+document.addEventListener('DOMContentLoaded', loadDataTabel);
+
+
+       // Elements
+const editAdminModal = document.getElementById('editAdminModal');
+const closeEditModalBtn = document.getElementById('closeEditModalBtn');
+const editForm = document.getElementById('editForm');
+
+// Show Modal (Corrected Function Name)
+function editAdmin(id) {
+    fetch(`http://127.0.0.1:8000/api/auth/getAdmin/${id}`)
+        .then(response => response.json())
+        .then(admin => {
+            // Populate modal with existing admin data
+            document.getElementById('editAdminId').value = admin.id;
+            document.getElementById('editNiip').value = admin.niip;
+            document.getElementById('editNama').value = admin.nama;
+            document.getElementById('editJabatan').value = admin.jabatan;
+            document.getElementById('editUnit').value = admin.unit;
+            document.getElementById('editRole').value = admin.role;
+            
+            // Show the modal
+            editAdminModal.classList.remove('hidden');
+        })
+        .catch(error => {
+            console.error('Error fetching admin data:', error);
+        });
+}
+
+// Hide Modal
+closeEditModalBtn.addEventListener('click', () => {
+    editAdminModal.classList.add('hidden');
+});
+
+// Handle form submission for editing admin
+editForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const id = document.getElementById('editAdminId').value;
+    const nama = document.getElementById('editNama').value;
+    const jabatan = document.getElementById('editJabatan').value;
+    const unit = document.getElementById('editUnit').value;
+    const role = document.getElementById('editRole').value;
+
+    try {
+        const response = await fetch(`http://127.0.0.1:8000/api/auth/updateAdmin/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                nama,
+                jabatan,
+                unit,
+                role,
+            }),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            alert('Admin updated successfully');
+            editAdminModal.classList.add('hidden');
+            loadDataTabel(); // Reload the table data
+        } else {
+            alert('Error: ' + result.error);
+        }
+    } catch (error) {
+        console.error('Error updating admin:', error);
+        alert('An error occurred while updating the admin.');
+    }
+});
+function redirectToResetPassword(id) {
+    window.location.href = `reset-password.html?id=${id}`;
+}
+
+
+    </script>
+</body>
+
+</html>
