@@ -40,46 +40,22 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <i class="bi bi-list toggle-sidebar-btn"></i>
-            <a href="dahsboard.html" class="logo d-flex align-items-center">
-              <img src="assets/img/rb-logo.png" alt="">
-              <span class="d-none d-lg-block">UNDIAN DAOP 7</span>
+            <a href="dashboard.html" class="logo d-flex align-items-center" style="flex-grow: 1;">
+                <span class="d-none d-lg-block" style="flex-grow: 1; white-space: nowrap;">
+                    HUT PT. KAI 79 TAHUN DAOP 7 MADIUN
+                </span>
             </a>
-          </div><!-- End Logo -->
-      
-
-        <!-- <div class="search-bar">
-            <form class="search-form d-flex align-items-center" method="POST" action="#">
-                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-            </form>
-        </div> -->
-
+        </div>
+        
+    
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
-                <li class="nav-item dropdown pe-3">
-                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="assets/img/user-profile.png" alt="Profile" class="rounded-circle">
-                        <span id="displayUsername" class="d-none d-md-block dropdown-toggle ps-2"></span>
-                    </a><!-- End Profile Iamge Icon -->
-
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#" id="signOut">
-                                <i class="bi bi-box-arrow-right"></i>
-                                <span>Log out</span>
-                            </a>
-                        </li>
-
-                    </ul>
-                    <!-- End Profile Dropdown Items -->
-                </li>
-                <!-- End Profile Nav -->
-
+                <img src="assets/img/Logo-hd.png" alt="" style="max-width: 80px; margin-right: 20px;">
             </ul>
-        </nav><!-- End Icons Navigation -->
-
+        </nav>
+        
+    
     </header><!-- End Header -->
-
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
@@ -91,12 +67,7 @@
                     <span>Dashboard</span>
                 </a>
             </li><!-- End Dashboard Nav -->
-            <li class="nav-item">
-                <a class="nav-link " href="history.html">
-                    <i class="bi bi-grid"></i>
-                    <span>History</span>
-                </a>
-            </li><!-- End Dashboard Nav -->
+          
             
             <li class="nav-item">
                 <a class="nav-link" href="master-user.html">
@@ -124,20 +95,20 @@
                     <span>Master Doorprize</span>
                 </a>
             </li><!-- End Master Doorprize Nav -->
-
             <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-error-404.html">
-                  <i class="bi bi-dash-circle"></i>
-                  <span>Error 404</span>
+                <a class="nav-link " href="history.html">
+                  <i class="bi bi-grid"></i>
+                  <span>History</span>
                 </a>
-              </li><!-- End Error 404 Page Nav -->
+              </li><!-- End History Nav -->
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="signOutSidebar">
+                  <i class="bi bi-box-arrow-right"></i>
+                  <span>Log out</span>
+                </a>
+              </li><!-- End Log out Nav -->
+
         
-              <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-blank.html">
-                  <i class="bi bi-file-earmark"></i>
-                  <span>Blank</span>
-                </a>
-              </li><!-- End Blank Page Nav -->
         
             </ul>
 
@@ -183,6 +154,7 @@
                         <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Kategori</th>
                         <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Jumlah Awal</th>
                         <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Jumlah Sisa</th>
+                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Gambar</th>
                         <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">sponsor</th>
                         <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Action</th>
                         <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Created adt</th>
@@ -213,7 +185,7 @@
                 </div>
                 <div class="modal-body">
                     <!-- Multi Columns Form -->
-                    <form id="addHadiahForm" class="row g-3">
+                    <form id="addHadiahForm" class="row g-3" enctype="multipart/form-data">
                         <div class="col-md-12">
                             <label for="inputNama" class="form-label">Nama Hadiah</label>
                             <input type="text" class="form-control" id="inputNama" name="nama_hadiah" placeholder="masukkan nama" required>
@@ -231,14 +203,19 @@
                             <input type="number" class="form-control" id="inputJumlah" name="jumlah_awal" placeholder="masukkan jumlah" required>
                         </div>
                         <div class="col-md-12">
-                            <label for="input" class="form-label">Sponsor</label>
+                            <label for="inputSponsor" class="form-label">Sponsor</label>
                             <input type="text" class="form-control" id="inputSponsor" name="sponsor" placeholder="masukkan sponsor opsional">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="inputGambar" class="form-label">Upload Gambar</label>
+                            <input type="file" class="form-control" id="inputGambar" name="gambar" accept="image/*">
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </form><!-- End Multi Columns Form -->
                 </div>
+                
             </div>
         </div>
     </div>
@@ -249,7 +226,7 @@
 <div id="editHadiahModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
     <div class="bg-white w-full max-w-lg mx-auto rounded shadow-lg p-6 relative">
         <h2 class="text-2xl font-bold mb-4">Edit Hadiah</h2>
-        <form id="editForm" class="space-y-4">
+        <form id="editForm" class="space-y-4" enctype="multipart/form-data">
             <input type="hidden" id="editHadiahId">
             <div>
                 <label class="block text-sm font-medium mb-2">Nama Hadiah</label>
@@ -271,6 +248,10 @@
                 <label for="input" class="form-label">Sponsor</label>
                 <input type="text" class="form-control" id="editSponsor" name="sponsor" placeholder="masukkan sponsor opsional">
             </div>
+            <div class="col-md-12">
+                <label for="editGambar" class="form-label">Upload Gambar (Opsional)</label>
+                <input type="file" class="form-control" id="editGambar" name="gambar" accept="image/*">
+            </div>
             <div class="flex justify-between">
                 <button type="button" id="closeEditModalBtn" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
                     Batal
@@ -280,6 +261,7 @@
                 </button>
             </div>
         </form>
+        
     </div>
 </div>
 
@@ -325,20 +307,6 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
-    <script>
-        // Ambil username dari localStorage
-        const username = localStorage.getItem('username');
-
-        // Cek jika username ada di localStorage
-        if (username) {
-            // Tampilkan username di elemen dengan id 'displayUsername'
-            document.getElementById('displayUsername').textContent = username;
-        } else {
-            // Jika tidak ada username, redirect ke halaman login atau tampilkan pesan
-            console.log("No username found. Please login.");
-            window.location.href = "pages-login.html"; // Redirect ke halaman login jika diperlukan
-        }
-    </script>
     <script>
 document.getElementById('searchQuery').addEventListener('input', function () {
     const searchQuery = this.value;
@@ -386,7 +354,9 @@ function updateTable(data) {
                         <td class="whitespace-nowrap px-5 py-1 text-center">${item.kategori}</td>
                         <td class="whitespace-nowrap px-5 py-1 text-center">${item.jumlah_awal}</td>
                         <td class="whitespace-nowrap px-5 py-1 text-center">${item.jumlah_sisa}</td>
+                          <td class="whitespace-nowrap px-5 py-1 text-center">${item.gambar}</td>
                         <td class="whitespace-nowrap px-5 py-1 text-center">${item.sponsor}</td>
+                      
                         <td class="whitespace-nowrap px-5 py-1 text-center">
                           <button class="edit-button bg-blue-500 text-white px-2 py-1 rounded" onclick="editHadiah(${item.id})">Edit</button>
                           <button class="delete-button bg-red-500 text-white px-2 py-1 rounded" onclick="showDeleteModal(${item.id})">Delete</button>
@@ -410,16 +380,40 @@ function updateTable(data) {
     </script>
 
     <script>
-        document.getElementById("signOut").addEventListener("click", function (doorprize) {
-            event.preventDefault(); // Mencegah reload halaman
+      document.addEventListener("DOMContentLoaded", function() {
+  // Ambil username dari localStorage
+  const username = localStorage.getItem('username');
+  
+  // Cek jika username ada di localStorage
+  if (username) {
+    console.log("User logged in as:", username);
+  } else {
+    // Jika tidak ada username, redirect ke halaman login atau tampilkan pesan
+    console.log("No username found. Please login.");
+    window.location.href = "pages-login.html"; // Redirect ke halaman login jika diperlukan
+  }
 
-            // Hapus JWT token dari localStorage
-            localStorage.removeItem("jwtToken");
-            localStorage.removeItem("username");
+  // Sign out event listener untuk sidebar log out
+  document.getElementById("signOutSidebar").addEventListener("click", function(event) {
+    event.preventDefault(); // Mencegah reload halaman
 
-            // Arahkan user ke halaman login
-            window.location.href = "pages-login.html"; // Ganti dengan path halaman login Anda
-        });
+    // Hapus JWT token dan username dari localStorage
+    localStorage.removeItem("jwtToken");
+    localStorage.removeItem("username");
+
+    // Arahkan user ke halaman login
+    window.location.href = "pages-login.html"; // Redirect ke halaman login
+  });
+
+  // Ambil user role dari localStorage
+  const userRole = localStorage.getItem('role');
+
+  // Sembunyikan menu Mastering jika user bukan Admin
+  if (userRole !== 'Admin') {
+    document.getElementById('mastering-menu').style.display = 'none';
+  }
+});
+
     </script>
 
 <script>
@@ -495,7 +489,9 @@ function updateTable(data) {
     <td class="whitespace-nowrap px-5 py-1 text-center">${item.kategori}</td>
     <td class="whitespace-nowrap px-5 py-1 text-center">${item.jumlah_awal}</td>
         <td class="whitespace-nowrap px-5 py-1 text-center">${item.jumlah_sisa}</td>
+          <td class="whitespace-nowrap px-5 py-1 text-center">${item.gambar}</td>
         <td class="whitespace-nowrap px-5 py-1 text-center">${item.sponsor}</td>
+        
     <td class="whitespace-nowrap px-5 py-1 text-center">
       <button class="edit-button bg-blue-500 text-white px-2 py-1 rounded" onclick="editHadiah(${item.id})">Edit</button>
       <button class="delete-button bg-red-500 text-white px-2 py-1 rounded" onclick="showDeleteModal(${item.id})">Delete</button>
@@ -525,21 +521,14 @@ function updateTable(data) {
     // Ambil data dari form
     const formData = new FormData(this);
 
-    // Konversi FormData menjadi objek JSON
-    const data = {};
-    formData.forEach((value, key) => {
-        data[key] = value;
-    });
-
     // Kirim data ke endpoint
     fetch('http://127.0.0.1:8000/api/doorprize/add-hadiah', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
-    },
-    body: JSON.stringify(data),
-})
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+        },
+        body: formData,  // Kirim langsung FormData
+    })
     .then(response => {
         console.log('Response Status:', response.status);
         console.log('Response Headers:', [...response.headers]); // Log semua header response
@@ -567,13 +556,10 @@ function updateTable(data) {
         console.error('Error:', error);
         alert('An error occurred!');
     });
-
-
 });
 
 // Panggil fungsi untuk memuat data tabel ketika halaman dimuat
 document.addEventListener('DOMContentLoaded', loadDataTabel);
-
 
    // Elements
 const editHadiahModal = document.getElementById('editHadiahModal');
@@ -591,6 +577,7 @@ function editHadiah(id) {
                 document.getElementById('editNama').value = doorprize.data.nama_hadiah;
                 document.getElementById('editJenis').value = doorprize.data.kategori;
                 document.getElementById('editJumlah').value = doorprize.data.jumlah_awal;
+                document.getElementById('editJumlah').value = doorprize.data.gambar;
                 document.getElementById('editSponsor').value = doorprize.data.sponsor;
             
             // Show the modal
@@ -614,6 +601,7 @@ editForm.addEventListener('submit', async function (e) {
     const nama_hadiah = document.getElementById('editNama').value;
     const kategori = document.getElementById('editJenis').value;
     const jumlah_awal = document.getElementById('editJumlah').value;
+    const gambar = document.getElementById('editGambar').value;
     const sponsor = document.getElementById('editSponsor').value;
 
     try {
@@ -626,6 +614,7 @@ editForm.addEventListener('submit', async function (e) {
                 nama_hadiah,
                 kategori,
                 jumlah_awal,
+                gambar,
                 sponsor,
             }),
         });
@@ -646,6 +635,7 @@ editForm.addEventListener('submit', async function (e) {
 });
 
     </script>
+    
 </body>
 
 </html>
