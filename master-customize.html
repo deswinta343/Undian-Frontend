@@ -36,27 +36,26 @@
 <body>
 
     <!-- ======= Header ======= -->
-     <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
+    <header id="header" class="header fixed-top d-flex align-items-center">
 
-    <div class="d-flex align-items-center justify-content-between">
-        <i class="bi bi-list toggle-sidebar-btn"></i>
-        <a href="dashboard.html" class="logo d-flex align-items-center" style="flex-grow: 1;">
-            <span id="headerText" class="d-none d-lg-block" style="flex-grow: 1; white-space: nowrap;">
-                Spin And Win!
-            </span>
-        </a>
-    </div>  
+        <div class="d-flex align-items-center justify-content-between">
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+            <a href="dashboard.html" class="logo d-flex align-items-center" style="flex-grow: 1;">
+                <span id="headerText" class="d-none d-lg-block" style="flex-grow: 1; white-space: nowrap;">
+                    Spin And Win!
+                </span>
+            </a>
+        </div>  
+      
     
-    <nav class="header-nav ms-auto">
-        <ul class="d-flex align-items-center">
-            <img src="assets/img/Logo-hd.png" alt="" style="max-width: 80px; margin-right: 20px;">
-        </ul>
-    </nav>
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+                <img src="assets/img/Logo-hd.png" alt="" style="max-width: 80px; margin-right: 20px;">
+            </ul>
+        </nav>
+        
     
-
-</header><!-- End Header -->
-
+    </header><!-- End Header -->
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
@@ -89,13 +88,19 @@
                     <span>Master Event</span>
                 </a>
             </li><!-- End Master Event Nav -->
-            
             <li class="nav-item">
                 <a class="nav-link" href="master-doorprize.html">
                     <i class="bi bi-gift"></i>
                     <span>Master Doorprize</span>
                 </a>
-            </li><!-- End Master Doorprize Nav -->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="master-customize.html">
+                    <i class="bi bi-gift"></i>
+                    <span>Master Header</span>
+                </a>
+            </li>
+              <!-- End Master Doorprize Nav -->
             <li class="nav-item">
                 <a class="nav-link " href="history.html">
                     <i class="bi bi-grid"></i>
@@ -104,11 +109,10 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link " href="master-customize.html">
-                    <i class="bi bi-grid"></i>
+                    <i class="bi bi-gear"></i>
                     <span>Master Header</span>
                 </a>
             </li>
-            <li>
             <li class="nav-item">
                 <a class="nav-link" href="#" id="signOutSidebar">
                   <i class="bi bi-box-arrow-right"></i>
@@ -116,66 +120,41 @@
                 </a>
               </li><!-- End Log out Nav -->
             </ul>
-
-
     </aside><!-- End Sidebar-->
 
     <main id="main" class="main">
-
         <div class="pagetitle">
-            <h1>History Undian</h1>
+            <h1>Master Event</h1>
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <nav>
                     <ol class="breadcrumb mb-0">
-                        <li class="breadcrumb-item"><a href="dahsboard.html">Kembali</a></li>
-                        <!-- <li class="breadcrumb-item">Tabel</li> -->
-                        <li class="breadcrumb-item active">Data History</li>
+                        <li class="breadcrumb-item"><a href="dashboard.html">Kembali</a></li>
+                        <li class="breadcrumb-item active">Data Event</li>
                     </ol>
                 </nav>
             </div>
         </div>
-        <!-- <div class="container mx-auto"> -->
-
-            <div class="flex justify-between items-center mb-4">
-                <!-- Tombol Add User dengan ikon -->
-                <a href="#" id="export-btn" class="btn btn-primary d-flex items-center">
-                    <i class="bi bi-file-earmark me-2"></i> <!-- Ikon File -->
-                    <span>Export Data</span>
-                 </a>
-                 
-             
     
-                <!-- Search Bar -->
-                <!-- <input type="text" id="searchQuery" placeholder="Search..."
-                    class="w-full max-w-xs px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /> -->
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Profile Header</h5>
+              <p>Header Website spin & win bisa dicustom sesuai kebutuhan tampilan. Lakukan edit pada penamaan kemudian simpan perubahan untuk menyimpan perubahan penamaan header website.</p>
+              
+              <!-- Form untuk menampilkan dan mengupdate header -->
+              <form id="headerForm" class="row g-3 justify-center">
+                <div class="col-md-4 mx-auto"> <!-- Tambahkan mx-auto untuk memposisikan di tengah -->
+                  <!-- <label for="namaHeader" class="form-label">Edit Penamaan header</label> -->
+                  <input type="text" class="form-control" id="namaHeader" required>
+                </div>
+                <div class="col-12 text-center">
+                  <button class="btn btn-primary" type="submit">Simpan perubahan</button>
+                </div>
+              </form>
             </div>
-
-        <!-- Tabel Data Admin -->
-        <div class="overflow-x-auto rounded-lg border border-gray-200">
-            <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
-                <thead class="ltr:text-left rtl:text-right">
-                    <tr>
-                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">No</th>
-                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">NIPP</th>
-                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Hadiah</th>
-                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Nama</th>
-                        <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Unit</th>
-                        <!-- <th class="whitespace-nowrap px-6 py-3 font-bold text-gray-900 text-center">Jabatan</th> -->
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200" id="dataTable">
-                </tbody>
-            </table>
-
-            <!-- Pagination Controls -->
-            <div id="paginationControls" class="flex justify-center mt-4"></div>
-        </div>
-        <!-- </div> -->
-
-        <!-- </div> -->
-
-    </main><!-- End #main -->
-
+          </div>
+          
+    </main>
+    
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
@@ -224,17 +203,6 @@
 
     // Panggil fungsi fetch saat halaman dimuat
     window.onload = fetchHeaderText;
-
-function validatePasswords() {
-    var password = document.getElementById("inputPassword").value;
-    var passwordAgain = document.getElementById("inputPasswordAgain").value;
-
-    if (password !== passwordAgain) {
-        alert("Passwords do not match. Please try again.");
-        return false; // Mencegah pengiriman form jika password tidak cocok
-    }
-    return true; // Lanjutkan pengiriman form jika password cocok
-}
         // Ambil username dari localStorage
         document.addEventListener("DOMContentLoaded", function() {
   // Ambil username dari localStorage
@@ -269,87 +237,66 @@ function validatePasswords() {
     document.getElementById('mastering-menu').style.display = 'none';
   }
 });
-    </script>
 
-    <script>
-        // Deklarasi fungsi loadDataTabel di global scope
-        function loadDataTabel() {
-    console.log(localStorage.getItem('jwtToken'))
-    fetch('http://127.0.0.1:8000/api/riwayat/riwayat', {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${localStorage.getItem('jwtToken')}`
+//header
+async function fetchCustomizeHeader() {
+        try {
+            const response = await fetch('http://127.0.0.1:8000/api/customize-header/get');
+            if (!response.ok) {
+                throw new Error('Gagal mengambil data header');
+            }
+            const data = await response.json();
+            
+            // Cari data dengan ID 2
+            const headerData = data.data.find(header => header.id === 2);
+            if (headerData) {
+                // Menampilkan nama_header di input field
+                document.getElementById('namaHeader').value = headerData.nama_header;
+            } else {
+                console.error('Data dengan ID 2 tidak ditemukan.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
         }
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Data fetched:', data.data);
+    }
 
-        const tableBody = document.getElementById('dataTable');
-        if (!tableBody) {
-            console.error('Element with id "dataTable" not found.');
-            return;
-        }
+    // Fungsi untuk mengupdate data header dengan ID 2
+    async function updateCustomizeHeader(event) {
+        event.preventDefault(); // Mencegah form melakukan reload halaman secara default
 
-        tableBody.innerHTML = ''; // Kosongkan tabel terlebih dahulu
+        const namaHeader = document.getElementById('namaHeader').value;
 
-        // Pastikan data berupa array
-        if (Array.isArray(data.data)) {
-            data.data.forEach((item, index) => {
-                const row = `
-                    <tr>
-                        <td class="whitespace-nowrap px-5 py-1 text-center">${index + 1}</td>
-                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.nipp}</td>
-                                                <td class="whitespace-nowrap px-5 py-1 text-center">${item.nama_hadiah}</td>
-                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.pemenang}</td>
-                        <td class="whitespace-nowrap px-5 py-1 text-center">${item.unit}</td>
-                       
-                    </tr>
-                `;
-                tableBody.insertAdjacentHTML('beforeend', row); // Tambahkan row ke tabel
+        try {
+            const response = await fetch('http://127.0.0.1:8000/api/customize-header/update/2', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    nama_header: namaHeader,
+                }),
             });
-        } else {
-            console.error('Data format is incorrect. Expected "data" to be an array.');
+
+            if (!response.ok) {
+                throw new Error('Gagal memperbarui header');
+            }
+
+            const data = await response.json();
+            alert('Header berhasil diperbarui!'); // Berikan feedback ke user
+            console.log('Response:', data);
+
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Terjadi kesalahan saat memperbarui header.');
         }
-    })
-    .catch(error => console.error('Error fetching data:', error));
-}
+    }
 
-document.addEventListener('DOMContentLoaded', loadDataTabel);
+    // Panggil fungsi fetch saat halaman dimuat
+    window.onload = fetchCustomizeHeader;
 
-document.getElementById('export-btn').addEventListener('click', function (e) {
-    e.preventDefault(); // Mencegah default link behavior
-
-    // Melakukan request ke API export dan memulai unduhan file
-    fetch('http://127.0.0.1:8000/api/export-riwayat', {
-        method: 'GET',
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.blob(); // Mendapatkan data dalam bentuk blob
-    })
-    .then(blob => {
-        // Membuat URL sementara untuk file
-        const url = window.URL.createObjectURL(new Blob([blob]));
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', 'riwayat.xlsx'); // Nama file yang akan diunduh
-        
-        // Memulai unduhan
-        document.body.appendChild(link);
-        link.click();
-        a.remove();
-        
-        // Membersihkan elemen link setelah selesai
-        link.parentNode.removeChild(link);
-    })
-    .catch(error => {
-        console.error('Error during export:', error);
-    });
-});
+    // Tangani submit form untuk update data
+    const headerForm = document.getElementById('headerForm');
+    headerForm.addEventListener('submit', updateCustomizeHeader);
 
     </script>
 </body>

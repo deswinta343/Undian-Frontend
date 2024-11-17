@@ -41,12 +41,11 @@
         <div class="d-flex align-items-center justify-content-between">
             <i class="bi bi-list toggle-sidebar-btn"></i>
             <a href="dashboard.html" class="logo d-flex align-items-center" style="flex-grow: 1;">
-                <span class="d-none d-lg-block" style="flex-grow: 1; white-space: nowrap;">
-                    HUT PT. KAI 79 TAHUN DAOP 7 MADIUN
+                <span id="headerText" class="d-none d-lg-block" style="flex-grow: 1; white-space: nowrap;">
+                    Spin And Win!
                 </span>
             </a>
-        </div>
-        
+        </div>  
     
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
@@ -97,9 +96,15 @@
             <li class="nav-item">
                 <a class="nav-link " href="history.html">
                     <i class="bi bi-grid"></i>
-                    <span>History</span>
+                    <span>History Undian</span>
                 </a>
-            </li><!-- End Dashboard Nav -->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="master-customize.html">
+                    <i class="bi bi-gear"></i>
+                    <span>Master Header</span>
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" id="signOutSidebar">
                   <i class="bi bi-box-arrow-right"></i>
@@ -293,6 +298,30 @@
 
     <script>
 
+async function fetchHeaderText() {
+        try {
+            const response = await fetch('http://127.0.0.1:8000/api/customize-header/get');
+            if (!response.ok) {
+                throw new Error('Gagal mengambil data header');
+            }
+            const data = await response.json();
+            
+            // Cari data dengan ID 2
+            const headerData = data.data.find(header => header.id === 2);
+            if (headerData) {
+                // Mengubah teks di elemen span
+                document.getElementById('headerText').textContent = headerData.nama_header;
+            } else {
+                console.error('Data dengan ID 2 tidak ditemukan.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    // Panggil fungsi fetch saat halaman dimuat
+    window.onload = fetchHeaderText;
+
 function validatePasswords() {
     var password = document.getElementById("inputPassword").value;
     var passwordAgain = document.getElementById("inputPasswordAgain").value;
@@ -338,8 +367,6 @@ function validatePasswords() {
   }
 });
 
-    </script>
-    <script>
 
    document.getElementById('searchQuery').addEventListener('input', function () {
         const searchQuery = this.value;
@@ -403,9 +430,6 @@ function updateTable(data) {
 }
 
 
-    </script>
-
-<script>
    let eventIdToDelete = null;
 
 function showDeleteModal(id) {
@@ -444,9 +468,6 @@ function deleteEvent(id) {
     });
 }
 
-</script>
-
-    <script>
 // Panggil fungsi untuk memuat data tabel ketika halaman dimuat
 document.addEventListener('DOMContentLoaded', loadDataTabel);
 

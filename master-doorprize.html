@@ -41,11 +41,11 @@
         <div class="d-flex align-items-center justify-content-between">
             <i class="bi bi-list toggle-sidebar-btn"></i>
             <a href="dashboard.html" class="logo d-flex align-items-center" style="flex-grow: 1;">
-                <span class="d-none d-lg-block" style="flex-grow: 1; white-space: nowrap;">
-                    HUT PT. KAI 79 TAHUN DAOP 7 MADIUN
+                <span id="headerText" class="d-none d-lg-block" style="flex-grow: 1; white-space: nowrap;">
+                    Spin And Win!
                 </span>
             </a>
-        </div>
+        </div>        
         
     
         <nav class="header-nav ms-auto">
@@ -98,9 +98,15 @@
             <li class="nav-item">
                 <a class="nav-link " href="history.html">
                   <i class="bi bi-grid"></i>
-                  <span>History</span>
+                  <span>History Undian</span>
                 </a>
-              </li><!-- End History Nav -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="master-customize.html">
+                    <i class="bi bi-gear"></i>
+                    <span>Master Header</span>
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" id="signOutSidebar">
                   <i class="bi bi-box-arrow-right"></i>
@@ -118,7 +124,7 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Tabel Data Master</h1>
+            <h1>Master Doorprize</h1>
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <nav>
                     <ol class="breadcrumb mb-0">
@@ -131,14 +137,25 @@
         </div>
         <!-- <div class="container mx-auto"> -->
 
-        <div class="flex justify-between items-center mb-4">
-            <!-- Tombol Add User dengan ikon -->
-            <a href="#" class="btn btn-primary d-flex items-center" data-bs-toggle="modal"
-                data-bs-target="#verticalycentered">
-                <i class="bi bi-person-plus-fill me-2"></i> <!-- Ikon Add User -->
-                <span>Tambah Hadiah</span>
-            </a>
-
+            <div class="flex justify-between items-center mb-4">
+                <!-- Tombol Add User dengan ikon -->
+                <div class="d-flex">
+                    <!-- Tombol Tambah Kandidat -->
+                    <a href="#" class="btn btn-primary d-flex items-center me-4" data-bs-toggle="modal"
+                       data-bs-target="#verticalycentered">
+                      <i class="bi bi-person-plus-fill me-2"></i> <!-- Ikon Add User -->
+                      <span>Tambah Hadiah</span>
+                    </a>
+                  
+                    <!-- Tombol Upload -->
+                    <a href="#" class="btn btn-primary d-flex items-center" data-bs-toggle="modal"
+                       data-bs-target="#uploadExcelModal">
+                      <i class="bi bi-clipboard-plus me-2"></i>
+                      <span>Upload</span>
+                    </a>
+                  </div>
+                  
+                
             <!-- Search Bar -->
             <input type="text" id="searchQuery" placeholder="Search..."
                 class="w-full max-w-xs px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
@@ -173,6 +190,40 @@
         <!-- </div> -->
 
     </main><!-- End #main -->
+    <div class="modal fade" id="uploadExcelModal" tabindex="-1" aria-labelledby="uploadExcelLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="uploadExcelLabel">Upload File Excel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Upload Form -->
+                    <form id="uploadExcelForm" class="row g-3" enctype="multipart/form-data">
+                        <div class="col-md-12">
+                            <p>Format Excel di sini: 
+                                <a href="https://docs.google.com/spreadsheets/d/1NHOgeUGd6SsBSe0DWHQyv_oAjvT5hVLxdmfrQ8T6fPo/export?format=xlsx" target="_blank" class="text-primary">
+                                    klik untuk unduh
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="inputExcelFile" class="form-label">Pilih File Excel</label>
+                            <input type="file" class="form-control" id="inputExcelFile" name="file" accept=".xls,.xlsx" required>
+                        </div>
+                        <div class="col-md-12 mt-2">
+                            <small class="text-muted">Pastikan file dalam format Excel (.xls atau .xlsx).</small>
+                        </div>
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-primary">Upload</button>
+                        </div>
+                    </form>
+                    <!-- End Upload Form -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
 
     <!-- modal add -->
     <!-- Modal -->
@@ -207,8 +258,8 @@
                             <input type="text" class="form-control" id="inputSponsor" name="sponsor" placeholder="masukkan sponsor opsional">
                         </div>
                         <div class="col-md-12">
-                            <label for="inputGambar" class="form-label">Upload Gambar</label>
-                            <input type="file" class="form-control" id="inputGambar" name="gambar" accept="image/*">
+                            <label for="inputGambar" class="form-label">Upload Link Gambar</label>
+                            <input type="text" class="form-control" id="inputGambar" name="gambar" accept="image/*">
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -223,6 +274,7 @@
     <!-- end modal add -->
 
    <!-- Modal Edit Admin -->
+
 <div id="editHadiahModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
     <div class="bg-white w-full max-w-lg mx-auto rounded shadow-lg p-6 relative">
         <h2 class="text-2xl font-bold mb-4">Edit Hadiah</h2>
@@ -234,7 +286,7 @@
             </div>
             <div class="col-md-6">
                 <label for="inputJenis" class="form-label">Jenis</label>
-                <select id="editJenis" name="jenis" class="form-select" required>
+                <select id="editJenis" name="kategori" class="form-select" required>
                     <option selected disabled>Pilih...</option>
                     <option value="Umum">Umum</option>
                     <option value="Utama">Utama</option>
@@ -250,7 +302,7 @@
             </div>
             <div class="col-md-12">
                 <label for="editGambar" class="form-label">Upload Gambar (Opsional)</label>
-                <input type="file" class="form-control" id="editGambar" name="gambar" accept="image/*">
+                <input type="text" class="form-control" id="editGambar" name="gambar" accept="image/*">
             </div>
             <div class="flex justify-between">
                 <button type="button" id="closeEditModalBtn" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
@@ -283,6 +335,8 @@
         </div>
     </div>
 </div>
+<div id="preview" class="mt-3"></div>
+
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
@@ -306,8 +360,109 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
 
     <script>
+         async function fetchHeaderText() {
+        try {
+            const response = await fetch('http://127.0.0.1:8000/api/customize-header/get');
+            if (!response.ok) {
+                throw new Error('Gagal mengambil data header');
+            }
+            const data = await response.json();
+            
+            // Cari data dengan ID 2
+            const headerData = data.data.find(header => header.id === 2);
+            if (headerData) {
+                // Mengubah teks di elemen span
+                document.getElementById('headerText').textContent = headerData.nama_header;
+            } else {
+                console.error('Data dengan ID 2 tidak ditemukan.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    // Panggil fungsi fetch saat halaman dimuat
+    window.onload = fetchHeaderText;
+  document.addEventListener("DOMContentLoaded", function() {
+    const uploadExcelForm = document.getElementById("uploadExcelForm");
+    const inputExcelFile = document.getElementById("inputExcelFile");
+
+    inputExcelFile.addEventListener("change", function(event) {
+        const file = event.target.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+                const firstSheetName = workbook.SheetNames[0];
+                const worksheet = workbook.Sheets[firstSheetName];
+                const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+                // Tampilkan isi Excel di console (opsional)
+                console.log("Excel Data:", jsonData);
+
+                // Ambil header dan data dari file Excel
+                const headers = jsonData[0]; // Baris pertama sebagai header
+                const rows = jsonData.slice(1); // Baris berikutnya sebagai data
+
+                // Format data menjadi objek JSON
+                const formattedData = rows.map(row => {
+                    return headers.reduce((obj, header, index) => {
+                        obj[header] = row[index]; // Pemetaan setiap header dengan nilainya
+                        return obj;
+                    }, {});
+                });
+
+                // Tampilkan data yang diformat di console (opsional)
+                console.log("Formatted Data to send:", formattedData);
+
+                // Simpan data yang diformat untuk dikirim saat submit
+                uploadExcelForm.dataset.formattedData = JSON.stringify(formattedData);
+            };
+            reader.readAsArrayBuffer(file); // Membaca file sebagai ArrayBuffer
+        }
+    });
+    uploadExcelForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Mencegah reload halaman
+
+    const formattedData = JSON.parse(uploadExcelForm.dataset.formattedData || '[]');
+
+    fetch("http://127.0.0.1:8000/api/import-doorprizes", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json' // Mengatur tipe konten sebagai JSON
+        },
+        body: JSON.stringify({ data: formattedData }) // Mengirimkan data sebagai JSON
+    })
+    .then(response => {
+        if (!response.ok) {
+            return response.json().then(errData => {
+                throw new Error(errData.message || "Kesalahan saat mengunggah file.");
+            });
+        }
+        return response.json(); // Parsing respons JSON
+    })
+    .then(data => {
+        alert(data.message); // Menampilkan pesan sukses
+        loadDataTabel(); // Memuat ulang data tabel
+
+        // Menutup modal dengan Bootstrap 5
+        const uploadModal = document.getElementById('uploadExcelModal');
+        const modalInstance = bootstrap.Modal.getInstance(uploadModal);
+        modalInstance.hide();
+    })
+    .catch(error => {
+        console.error("There was a problem with the fetch operation:", error);
+        alert("Terjadi kesalahan saat mengunggah file: " + error.message); // Menampilkan pesan error
+    });
+});
+
+});
+
 document.getElementById('searchQuery').addEventListener('input', function () {
     const searchQuery = this.value;
 
@@ -567,21 +722,32 @@ const closeEditModalBtn = document.getElementById('closeEditModalBtn');
 const editForm = document.getElementById('editForm');
 
 // Show Modal (Corrected Function Name)
+
 function editHadiah(id) {
     fetch(`http://127.0.0.1:8000/api/doorprize/get-hadiah/${id}`)
         .then(response => response.json())
         .then(doorprize => {
             console.log(doorprize);
+            
             // Populate modal with existing hadiah data
             document.getElementById('editHadiahId').value = doorprize.data.id;
-                document.getElementById('editNama').value = doorprize.data.nama_hadiah;
-                document.getElementById('editJenis').value = doorprize.data.kategori;
-                document.getElementById('editJumlah').value = doorprize.data.jumlah_awal;
-                document.getElementById('editJumlah').value = doorprize.data.gambar;
-                document.getElementById('editSponsor').value = doorprize.data.sponsor;
+            document.getElementById('editNama').value = doorprize.data.nama_hadiah;
+            document.getElementById('editJenis').value = doorprize.data.kategori; // Set category (ensure values match your option values)
+            document.getElementById('editJumlah').value = doorprize.data.jumlah_awal;
+            document.getElementById('editSponsor').value = doorprize.data.sponsor;
+            document.getElementById('editGambar').value = doorprize.data.gambar; // Set gambar correctly
+
+            // Set the correct option in the select element for kategori
+            const editJenisSelect = document.getElementById('editJenis');
+            for (let i = 0; i < editJenisSelect.options.length; i++) {
+                if (editJenisSelect.options[i].value.toLowerCase() === doorprize.data.kategori.toLowerCase()) {
+                    editJenisSelect.selectedIndex = i;
+                    break;
+                }
+            }
             
             // Show the modal
-            editHadiahModal.classList.remove('hidden');
+            document.getElementById('editHadiahModal').classList.remove('hidden');
         })
         .catch(error => {
             console.error('Error fetching doorprize data:', error);
@@ -601,38 +767,41 @@ editForm.addEventListener('submit', async function (e) {
     const nama_hadiah = document.getElementById('editNama').value;
     const kategori = document.getElementById('editJenis').value;
     const jumlah_awal = document.getElementById('editJumlah').value;
-    const gambar = document.getElementById('editGambar').value;
     const sponsor = document.getElementById('editSponsor').value;
+    const gambar = document.getElementById('editGambar').value; // Ambil link gambar sebagai teks
 
     try {
-        const response = await fetch(`http://127.0.0.1:8000/api/doorprize/update/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                nama_hadiah,
-                kategori,
-                jumlah_awal,
-                gambar,
-                sponsor,
-            }),
-        });
+    const response = await fetch(`http://127.0.0.1:8000/api/doorprize/update/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            nama_hadiah,
+            kategori,
+            jumlah_awal,
+            gambar,   // Kirim link gambar sebagai teks
+            sponsor,
+        }),
+    });
 
-        const result = await response.json();
+    const result = await response.json();
+    console.log(result); // Cetak response dari server
 
-        if (response.ok) {
-            alert('Doorprize updated successfully');
-            editHadiahModal.classList.add('hidden');
-            loadDataTabel(); // Reload the table data
-        } else {
-            alert('Error: ' + result.error);
-        }
-    } catch (error) {
-        console.error('Error updating doorprize:', error);
-        alert('An error occurred while updating the doorprize.');
+    if (response.ok) {
+        alert('Doorprize updated successfully');
+        document.getElementById('editHadiahModal').classList.add('hidden');
+        loadDataTabel(); // Reload the table data
+    } else {
+        alert('Error: ' + result.error); // Tampilkan error dari response
     }
+} catch (error) {
+    console.error('Error updating doorprize:', error);
+    alert('An error occurred while updating the doorprize.');
+}
+
 });
+
 
     </script>
     

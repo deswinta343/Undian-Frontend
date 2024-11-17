@@ -41,13 +41,12 @@
         <div class="d-flex align-items-center justify-content-between">
             <i class="bi bi-list toggle-sidebar-btn"></i>
             <a href="dashboard.html" class="logo d-flex align-items-center" style="flex-grow: 1;">
-                <span class="d-none d-lg-block" style="flex-grow: 1; white-space: nowrap;">
-                    HUT PT. KAI 79 TAHUN DAOP 7 MADIUN
+                <span id="headerText" class="d-none d-lg-block" style="flex-grow: 1; white-space: nowrap;">
+                    Spin And Win!
                 </span>
             </a>
-        </div>
-        
-    
+        </div>  
+
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
                 <img src="assets/img/Logo-hd.png" alt="" style="max-width: 80px; margin-right: 20px;">
@@ -98,10 +97,15 @@
             <li class="nav-item">
                 <a class="nav-link " href="history.html">
                     <i class="bi bi-grid"></i>
-                    <span>History</span>
+                    <span>History Undian</span>
                 </a>
             </li><!-- End Dashboard Nav -->
-            
+            <li class="nav-item">
+                <a class="nav-link " href="master-customize.html">
+                    <i class="bi bi-gear"></i>
+                    <span>Master Header</span>
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" id="signOutSidebar">
                   <i class="bi bi-box-arrow-right"></i>
@@ -117,7 +121,7 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Tabel Data Kandidat Hadiah Umum</h1>
+            <h1>Master Kandidat Hadiah Umum</h1>
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <nav>
                     <ol class="breadcrumb mb-0">
@@ -216,7 +220,7 @@
                             <label for="inputNama" class="form-label">Nama</label>
                             <input type="text" class="form-control" id="inputNama" name="nama" placeholder="masukkan nama" required>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <label for="inputNIIP" class="form-label">NIPP</label>
                             <input type="text" class="form-control" id="inputNIIP" name="nipp" placeholder="masukkan nipp" required>
                         </div>
@@ -355,6 +359,29 @@
     <script src="assets/js/main.js"></script>
 
     <script>
+          async function fetchHeaderText() {
+        try {
+            const response = await fetch('http://127.0.0.1:8000/api/customize-header/get');
+            if (!response.ok) {
+                throw new Error('Gagal mengambil data header');
+            }
+            const data = await response.json();
+            
+            // Cari data dengan ID 2
+            const headerData = data.data.find(header => header.id === 2);
+            if (headerData) {
+                // Mengubah teks di elemen span
+                document.getElementById('headerText').textContent = headerData.nama_header;
+            } else {
+                console.error('Data dengan ID 2 tidak ditemukan.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    // Panggil fungsi fetch saat halaman dimuat
+    window.onload = fetchHeaderText;
    document.getElementById('searchQuery').addEventListener('input', function () {
         const searchQuery = this.value;
 
